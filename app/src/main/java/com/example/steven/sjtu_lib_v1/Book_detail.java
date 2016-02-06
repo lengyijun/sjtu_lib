@@ -39,7 +39,8 @@ import okhttp3.Response;
  */
 public class Book_detail extends DialogFragment {
 
-    private String url="http://ourex.lib.sjtu.edu.cn/primo_library/libweb/action/display.do?tabs=locationsTab&gathStatTab=true&ct=display&fn=search&doc=sjtulibxw000311379&indx=1&recIds=sjtulibxw000311379&recIdxs=0&elementId=0&renderMode=poppedOut&displayMode=full&frbrVersion=3&dscnt=0&scp.scps=scope%3A%28SJT%29%2Cscope%3A%28sjtu_metadata%29%2Cscope%3A%28sjtu_sfx%29%2Cscope%3A%28sjtulibzw%29%2Cscope%3A%28sjtulibxw%29%2CDuxiuBook&tab=default_tab&dstmp=1454668891915&vl(freeText0)=git&vid=chinese";
+//    private String url="http://ourex.lib.sjtu.edu.cn/primo_library/libweb/action/display.do?tabs=locationsTab&gathStatTab=true&ct=display&fn=search&doc=sjtulibxw000311379&indx=1&recIds=sjtulibxw000311379&recIdxs=0&elementId=0&renderMode=poppedOut&displayMode=full&frbrVersion=3&dscnt=0&scp.scps=scope%3A%28SJT%29%2Cscope%3A%28sjtu_metadata%29%2Cscope%3A%28sjtu_sfx%29%2Cscope%3A%28sjtulibzw%29%2Cscope%3A%28sjtulibxw%29%2CDuxiuBook&tab=default_tab&dstmp=1454668891915&vl(freeText0)=git&vid=chinese";
+    String url="http://ourex.lib.sjtu.edu.cn/primo_library/libweb/action/display.do?tabs=locationsTab&gathStatTab=true&ct=display&fn=search&doc=sjtulibzw000842374&indx=2&recIds=sjtulibzw000842374&recIdxs=1&elementId=1&renderMode=poppedOut&displayMode=full&frbrVersion=3&dscnt=0&scp.scps=scope%3A%28SJT%29%2Cscope%3A%28sjtu_metadata%29%2Cscope%3A%28sjtu_sfx%29%2Cscope%3A%28sjtulibzw%29%2Cscope%3A%28sjtulibxw%29&frbg=&tab=default_tab&dstmp=1454721170888&srt=rank&mode=Basic&&dum=true&tb=t&vl(1UIStartWith0)=contains&vl(10225382UI0)=any&vl(50541600UI1)=all_items&vl(freeText0)=git%20version%20control&vid=chinese";
     private Element element;
     private OnFragmentInteractionListener mListener;
     AlertDialog.Builder builder;
@@ -55,8 +56,6 @@ public class Book_detail extends DialogFragment {
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
      * @return A new instance of fragment book_detail.
      */
     // TODO: Rename and change types and number of parameters

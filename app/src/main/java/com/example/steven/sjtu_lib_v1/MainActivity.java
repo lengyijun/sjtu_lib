@@ -14,7 +14,6 @@ import org.jsoup.select.Elements;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.regex.Pattern;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -29,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     @Bind(R.id.paging_list_view) PagingListView plistview;
     String url="http://ourex.lib.sjtu.edu.cn/primo_library/libweb/action/search.do?fn=search&tab=default_tab&vid=chinese&scp.scps=scope%3A%28SJT%29%2Cscope%3A%28sjtu_metadata%29%2Cscope%3A%28sjtu_sfx%29%2Cscope%3A%28sjtulibzw%29%2Cscope%3A%28sjtulibxw%29%2CDuxiuBook&vl%28freeText0%29=%E4%B8%AD%E5%9B%BD";
     String url1="http://ourex.lib.sjtu.edu.cn/primo_library/libweb/action/search.do?fn=search&tab=default_tab&vid=chinese&scp.scps=scope%3A%28SJT%29%2Cscope%3A%28sjtu_metadata%29%2Cscope%3A%28sjtu_sfx%29%2Cscope%3A%28sjtulibzw%29%2Cscope%3A%28sjtulibxw%29%2CDuxiuBook&vl%28freeText0%29=git";
-    Pattern pattern= Pattern.compile("title=\"locationsTab&nbsp;");
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -73,7 +72,8 @@ public class MainActivity extends AppCompatActivity {
                 MainActivity.this.runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        plistview.setAdapter(new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_single_choice, data));
+                        plistview.setAdapter(new ArrayAdapter<String>(getApplicationContext(), R.layout.list_white_text, data));
+//                        plistview.setAdapter(new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_single_choice, data));
                     }
                 });
             }
@@ -81,8 +81,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @OnItemClick(R.id.paging_list_view) void onItemSelected(int position){
-        Book_detail book_detail=new Book_detail();
-        book_detail.show(getFragmentManager(),"new");
+        Book_detail bookDetail=new Book_detail();
+        bookDetail.show(getFragmentManager(),"book");
 //        Toast.makeText(this,position+"",Toast.LENGTH_SHORT).show();
     }
 }
