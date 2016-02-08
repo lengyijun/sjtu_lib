@@ -28,10 +28,8 @@ public class MainActivity extends AppCompatActivity {
     @Bind(R.id.paging_list_view) PagingListView plistview;
     @Bind(R.id.textView)TextView tv;
 
-    String first_url="http://ourex.lib.sjtu.edu.cn/primo_library/libweb/action/search.do?fn=search&tab=default_tab&vid=chinese&scp.scps=scope%3A%28SJT%29%2Cscope%3A%28sjtu_metadata%29%2Cscope%3A%28sjtu_sfx%29%2Cscope%3A%28sjtulibzw%29%2Cscope%3A%28sjtulibxw%29%2CDuxiuBook&vl%28freeText0%29=%E4%B8%AD%E5%9B%BD";
     String base_url="http://ourex.lib.sjtu.edu.cn/primo_library/libweb/action/search.do?fn=search&tab=default_tab&vid=chinese&scp.scps=scope%3A%28SJT%29%2Cscope%3A%28sjtu_metadata%29%2Cscope%3A%28sjtu_sfx%29%2Cscope%3A%28sjtulibzw%29%2Cscope%3A%28sjtulibxw%29%2CDuxiuBook&vl%28freeText0%29=";
     String url;
-
 
     Elements wholeBooks=new Elements();
     List<String> data=new ArrayList<String>();
