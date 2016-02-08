@@ -31,5 +31,6 @@ dependencies {
     compile 'com.github.nicolasjafelle:paginglistview:1.2'
     compile 'com.android.support:support-v4:23.1.1'
     compile 'com.zhy:okhttputils:2.2.0'
-//    compile project(':WaveCompat')
+    compile 'com.rengwuxian.materialedittext:library:2.1.4'
+    compile 'net.soulwolf.widget:materialRadio:1.0.1'
 }
