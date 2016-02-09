@@ -31,6 +31,5 @@ public class Search_activity extends AppCompatActivity{
         intent.putExtra("bookname",bookname);
         startActivity(intent);
 
-
     }
 }
