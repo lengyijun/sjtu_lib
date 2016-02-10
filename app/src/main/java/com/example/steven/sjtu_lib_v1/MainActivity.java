@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     String url;
 
     List<String> data=new ArrayList<String>();
-    List<String> NextUrls=new ArrayList<String>();
+    static public List<String> NextUrls=new ArrayList<String>();
     List<Element> book_elements=new ArrayList<Element>();
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
         plistview.setAdapter(new BookItemAdapter(this,0,book_elements));
         plistview.setHasMoreItems(true);
-        plistview.setPagingableListener(new PagingListView.Pagingable(){
+        plistview.setPagingableListener(new PagingListView.Pagingable() {
 
             @Override
             public void onLoadMoreItems() {
@@ -67,7 +67,8 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
                         Document doc = Jsoup.parse(response);
-                        get_next_url(doc);
+
+                        new Refrsh_next_url().execute(doc);
                         Elements elements = doc.getElementsByClass("EXLSummary");
                         for (Element i : elements) {
                             if (!i.getElementsMatchingText("馆藏信息").isEmpty()) {
@@ -77,13 +78,6 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
-    }
-
-    private void get_next_url(Document doc) {
-        Elements elements=doc.getElementsByAttributeValue("title","下一页");
-        if(elements.size()!=0){
-            NextUrls.add(elements.first().attr("href"));
-        }
     }
 
     @OnItemClick(R.id.paging_list_view) void onItemSelected(int position){
@@ -125,4 +119,23 @@ public class MainActivity extends AppCompatActivity {
             super.onPreExecute();
         }
     }
+
+    private class Refrsh_next_url extends AsyncTask<Object,Void,Elements>{
+
+        @Override
+        protected void onPostExecute(Elements elements) {
+            if(elements.size()!=0){
+                MainActivity.this.NextUrls.add(elements.first().attr("href"));
+            }
+            super.onPostExecute(elements);
+        }
+
+        @Override
+        protected Elements doInBackground(Object... params) {
+            Element come_in= (Element) params[0];
+            Elements elements=come_in .getElementsByAttributeValue("title", "下一页");
+            return elements;
+        }
+    }
+
 }
