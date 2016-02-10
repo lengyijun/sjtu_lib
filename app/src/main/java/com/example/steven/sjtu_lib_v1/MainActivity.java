@@ -3,7 +3,6 @@ package com.example.steven.sjtu_lib_v1;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,12 +30,9 @@ public class MainActivity extends AppCompatActivity {
     String base_url="http://ourex.lib.sjtu.edu.cn/primo_library/libweb/action/search.do?fn=search&tab=default_tab&vid=chinese&scp.scps=scope%3A%28SJT%29%2Cscope%3A%28sjtu_metadata%29%2Cscope%3A%28sjtu_sfx%29%2Cscope%3A%28sjtulibzw%29%2Cscope%3A%28sjtulibxw%29%2CDuxiuBook&vl%28freeText0%29=";
     String url;
 
-    Elements wholeBooks=new Elements();
     List<String> data=new ArrayList<String>();
     List<String> NextUrls=new ArrayList<String>();
-
-    public MainActivity() {
-    }
+    List<Element> book_elements=new ArrayList<Element>();
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,12 +43,12 @@ public class MainActivity extends AppCompatActivity {
 
         get_list_from_url(url);
 
+        plistview.setAdapter(new BookItemAdapter(this,0,book_elements));
         plistview.setHasMoreItems(true);
         plistview.setPagingableListener(new PagingListView.Pagingable(){
 
             @Override
             public void onLoadMoreItems() {
-                Toast.makeText(getApplicationContext(),"set pagingable listener",Toast.LENGTH_SHORT).show();;
                 new NextAsyncTask().execute();
             }
         });
@@ -73,15 +69,11 @@ public class MainActivity extends AppCompatActivity {
                         Document doc = Jsoup.parse(response);
                         get_next_url(doc);
                         Elements elements = doc.getElementsByClass("EXLSummary");
-                        wholeBooks.addAll(elements);
                         for (Element i : elements) {
-                            if (i.getElementsMatchingText("馆藏信息").isEmpty()) {
-                                wholeBooks.remove(i);
-                            } else {
-                                data.add(i.getElementsByClass("EXLResultTitle").text());
+                            if (!i.getElementsMatchingText("馆藏信息").isEmpty()) {
+                                book_elements.add(i);
                             }
                         }
-                        plistview.setAdapter(new ArrayAdapter<String>(getApplicationContext(), R.layout.list_white_text, data));
                     }
                 });
 
@@ -95,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @OnItemClick(R.id.paging_list_view) void onItemSelected(int position){
-        Book_detail bookDetail=new Book_detail(wholeBooks.get(position));
+        Book_detail bookDetail=new Book_detail(book_elements.get(position));
         bookDetail.show(getFragmentManager(), "book");
     }
 
@@ -104,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(Void Void) {
-            plistview.onFinishLoading(true,wholeBooks);
+            plistview.onFinishLoading(true,book_elements);
             plistview.setSelection(saved_postion);
             super.onPostExecute(Void);
         }
@@ -112,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected Void doInBackground(Void... params) {
             synchronized (this){
-                while (NextUrls.size() == 0 || wholeBooks.size() == 0) {
+                while (NextUrls.size() == 0 || book_elements.size() == 0) {
                     try {
                         Thread.sleep(1000);
                     } catch (InterruptedException e) {
