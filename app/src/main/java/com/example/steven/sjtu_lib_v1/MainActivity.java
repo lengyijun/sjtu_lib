@@ -1,12 +1,12 @@
 package com.example.steven.sjtu_lib_v1;
 
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.paging.listview.PagingListView;
+import com.yolanda.multiasynctask.MultiAsynctask;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.StringCallback;
 
@@ -85,18 +85,17 @@ public class MainActivity extends AppCompatActivity {
         bookDetail.show(getFragmentManager(), "book");
     }
 
-    private class NextAsyncTask extends AsyncTask<Void,Void,Void> {
+    public class NextAsyncTask extends MultiAsynctask<Void,Void,Void> {
         int saved_postion;
 
         @Override
-        protected void onPostExecute(Void Void) {
-            plistview.onFinishLoading(true,book_elements);
+        public void onResult(Void Void) {
+            plistview.onFinishLoading(true, book_elements);
             plistview.setSelection(saved_postion);
-            super.onPostExecute(Void);
         }
 
         @Override
-        protected Void doInBackground(Void... params) {
+        public Void onTask(Void... params) {
             synchronized (this){
                 while (NextUrls.size() == 0 || book_elements.size() == 0) {
                     try {
@@ -113,29 +112,30 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        protected void onPreExecute() {
+        public void onPrepare() {
 //            saved_postion=wholeBooks.size()-1;
             saved_postion=plistview.getFirstVisiblePosition();
-            super.onPreExecute();
         }
     }
 
-    private class Refrsh_next_url extends AsyncTask<Object,Void,Elements>{
+    private class Refrsh_next_url extends MultiAsynctask<Object,Void,Elements>{
+
 
         @Override
-        protected void onPostExecute(Elements elements) {
-            if(elements.size()!=0){
-                MainActivity.this.NextUrls.add(elements.first().attr("href"));
-            }
-            super.onPostExecute(elements);
-        }
-
-        @Override
-        protected Elements doInBackground(Object... params) {
-            Element come_in= (Element) params[0];
+        public Elements onTask(Object... objects) {
+            Element come_in= (Element) objects[0];
             Elements elements=come_in .getElementsByAttributeValue("title", "下一页");
             return elements;
         }
+
+        @Override
+        public void  onResult(Elements elements) {
+            if(elements.size()!=0){
+                MainActivity.this.NextUrls.add(elements.first().attr("href"));
+            }
+        }
+
+
     }
 
 }
