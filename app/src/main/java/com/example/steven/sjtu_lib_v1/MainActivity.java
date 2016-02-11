@@ -2,10 +2,10 @@ package com.example.steven.sjtu_lib_v1;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.TextView;
+import android.widget.ListView;
 import android.widget.Toast;
 
-import com.paging.listview.PagingListView;
+import com.example.steven.sjtu_lib_v1.view.SuperSwipeRefreshLayout;
 import com.yolanda.multiasynctask.MultiAsynctask;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.StringCallback;
@@ -24,13 +24,12 @@ import butterknife.OnItemClick;
 import okhttp3.Call;
 
 public class MainActivity extends AppCompatActivity {
-    @Bind(R.id.paging_list_view) PagingListView plistview;
-    @Bind(R.id.textView)TextView tv;
+    @Bind(R.id.swipe_refresh)SuperSwipeRefreshLayout superSwipeRefreshLayout;
+    @Bind(R.id.listView)ListView plistiview;
 
     String base_url="http://ourex.lib.sjtu.edu.cn/primo_library/libweb/action/search.do?fn=search&tab=default_tab&vid=chinese&scp.scps=scope%3A%28SJT%29%2Cscope%3A%28sjtu_metadata%29%2Cscope%3A%28sjtu_sfx%29%2Cscope%3A%28sjtulibzw%29%2Cscope%3A%28sjtulibxw%29%2CDuxiuBook&vl%28freeText0%29=";
     String url;
 
-    List<String> data=new ArrayList<String>();
     static public List<String> NextUrls=new ArrayList<String>();
     List<Element> book_elements=new ArrayList<Element>();
 
@@ -41,15 +40,25 @@ public class MainActivity extends AppCompatActivity {
         String bookname=getIntent().getExtras().getString("bookname");
         this.url=base_url+bookname;
 
+        plistiview.setAdapter(new BookItemAdapter(this, 0, book_elements));
         get_list_from_url(url);
+        plistiview.invalidateViews();
 
-        plistview.setAdapter(new BookItemAdapter(this,0,book_elements));
-        plistview.setHasMoreItems(true);
-        plistview.setPagingableListener(new PagingListView.Pagingable() {
+        superSwipeRefreshLayout.setOnPushLoadMoreListener(new SuperSwipeRefreshLayout.OnPushLoadMoreListener() {
+            @Override
+            public void onLoadMore() {
+                new NextAsyncTask().execute();
+
+            }
 
             @Override
-            public void onLoadMoreItems() {
-                new NextAsyncTask().execute();
+            public void onPushDistance(int distance) {
+
+            }
+
+            @Override
+            public void onPushEnable(boolean enable) {
+
             }
         });
     }
@@ -77,10 +86,9 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
                 });
-
     }
 
-    @OnItemClick(R.id.paging_list_view) void onItemSelected(int position){
+    @OnItemClick(R.id.listView) void onItemSelected(int position){
         Book_detail bookDetail=new Book_detail(book_elements.get(position));
         bookDetail.show(getFragmentManager(), "book");
     }
@@ -90,8 +98,8 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onResult(Void Void) {
-            plistview.onFinishLoading(true, book_elements);
-            plistview.setSelection(saved_postion);
+            plistiview.invalidateViews();
+            plistiview.setSelection(saved_postion);
         }
 
         @Override
@@ -114,12 +122,11 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onPrepare() {
 //            saved_postion=wholeBooks.size()-1;
-            saved_postion=plistview.getFirstVisiblePosition();
+            saved_postion=plistiview.getFirstVisiblePosition();
         }
     }
 
     private class Refrsh_next_url extends MultiAsynctask<Object,Void,Elements>{
-
 
         @Override
         public Elements onTask(Object... objects) {
@@ -134,7 +141,6 @@ public class MainActivity extends AppCompatActivity {
                 MainActivity.this.NextUrls.add(elements.first().attr("href"));
             }
         }
-
 
     }
 

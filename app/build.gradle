@@ -33,6 +33,7 @@ dependencies {
     compile 'com.zhy:okhttputils:2.2.0'
     compile 'com.rengwuxian.materialedittext:library:2.1.4'
     compile 'com.mcxiaoke.volley:library:1.0.19'
+    compile files('libs/android-support-v7-recyclerview.jar')
     //    compile 'net.soulwolf.widget:materialRadio:1.0.1'
     compile files('libs/multi-asynctask.jar')
 }
