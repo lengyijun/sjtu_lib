@@ -1,10 +1,12 @@
-package com.example.steven.sjtu_lib_v1;
+package com.example.steven.sjtu_lib_v1.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.example.steven.sjtu_lib_v1.R;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;

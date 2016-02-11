@@ -1,4 +1,4 @@
-package com.example.steven.sjtu_lib_v1;
+package com.example.steven.sjtu_lib_v1.activity;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.example.steven.sjtu_lib_v1.R;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.StringCallback;
 

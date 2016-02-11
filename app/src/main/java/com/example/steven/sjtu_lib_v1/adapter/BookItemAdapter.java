@@ -1,4 +1,4 @@
-package com.example.steven.sjtu_lib_v1;
+package com.example.steven.sjtu_lib_v1.adapter;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -13,6 +13,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.NetworkImageView;
 import com.android.volley.toolbox.Volley;
+import com.example.steven.sjtu_lib_v1.R;
 
 import org.jsoup.nodes.Element;
 

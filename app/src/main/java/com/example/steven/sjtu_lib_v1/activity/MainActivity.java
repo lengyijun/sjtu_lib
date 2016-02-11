@@ -1,15 +1,24 @@
-package com.example.steven.sjtu_lib_v1;
+package com.example.steven.sjtu_lib_v1.activity;
 
+import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.baoyz.swipemenulistview.SwipeMenu;
+import com.baoyz.swipemenulistview.SwipeMenuCreator;
+import com.baoyz.swipemenulistview.SwipeMenuItem;
+import com.baoyz.swipemenulistview.SwipeMenuListView;
+import com.example.steven.sjtu_lib_v1.R;
+import com.example.steven.sjtu_lib_v1.adapter.BookItemAdapter;
 import com.example.steven.sjtu_lib_v1.view.SuperSwipeRefreshLayout;
 import com.yolanda.multiasynctask.MultiAsynctask;
 import com.zhy.http.okhttp.OkHttpUtils;
@@ -30,7 +39,7 @@ import okhttp3.Call;
 
 public class MainActivity extends AppCompatActivity {
     @Bind(R.id.swipe_refresh)SuperSwipeRefreshLayout superSwipeRefreshLayout;
-    @Bind(R.id.listView)ListView plistiview;
+    @Bind(R.id.listView)SwipeMenuListView plistiview;
 
 //    footerview
     ProgressBar footerProgressBar;
@@ -52,7 +61,31 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         get_intent_extra();
 
+        SwipeMenuCreator creator=new SwipeMenuCreator() {
+            @Override
+            public void create(SwipeMenu menu) {
+                SwipeMenuItem more_info=new SwipeMenuItem(getApplicationContext());
+                more_info.setBackground(new ColorDrawable(Color.rgb(0xC9,0xC9,0xCE)));
+                more_info.setWidth(dp2px(90));
+                more_info.setTitle("详细信息");
+                more_info.setTitleSize(18);
+                more_info.setTitleColor(Color.WHITE);
+                menu.addMenuItem(more_info);
+            }
+        };
+        plistiview.setMenuCreator(creator);
         plistiview.setAdapter(new BookItemAdapter(this, 0, book_elements));
+        plistiview.setOnMenuItemClickListener(new SwipeMenuListView.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(int position, SwipeMenu menu, int index) {
+                switch (index){
+                    case 0:
+                        show_detail_info(position);
+                }
+                return false;
+            }
+        });
+
         get_list_from_url(url);
 
         superSwipeRefreshLayout.setFooterView(createFootview());
@@ -74,9 +107,36 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    private void show_detail_info(int position) {
+        Element doc=book_elements.get(position);
+        Elements MultipleLink=doc.getElementsByClass("EXLBriefResultsDisplayMultipleLink");
+        Intent intent=new Intent();
+        if(MultipleLink.isEmpty()){
+            Element tosend=doc.getElementsByClass("EXLSummaryContainer").first();
+            tosend.getElementsByTag("script").remove();
+            tosend.getElementsByClass("EXLResultAvailability").remove();
+            tosend.getElementsByTag("noscript").remove();
+            
+            intent.setClass(MainActivity.this,Single_detail.class);
+            intent.putExtra("detail", tosend.toString());
+            startActivity(intent);
+        }else {
+            intent.setClass(MainActivity.this,MainActivity.class);
+            intent.putExtra("url",MultipleLink.attr("href"));
+            startActivity(intent);
+        }
+    }
+
     private void get_intent_extra() {
         String bookname=getIntent().getExtras().getString("bookname");
-        this.url=base_url+bookname;
+        String url_intent=getIntent().getExtras().getString("url");
+        if (bookname!=null){
+            this.url=base_url+bookname;
+        }else{
+            if(url_intent!=null){
+                this.url=url_intent;
+            }
+        }
     }
 
     private View createFootview() {
@@ -179,4 +239,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    private int dp2px(int dp) {
+        return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp,
+                getResources().getDisplayMetrics());
+    }
 }
