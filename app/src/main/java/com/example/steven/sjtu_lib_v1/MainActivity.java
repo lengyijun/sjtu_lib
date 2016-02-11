@@ -2,7 +2,12 @@ package com.example.steven.sjtu_lib_v1;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.steven.sjtu_lib_v1.view.SuperSwipeRefreshLayout;
@@ -27,28 +32,34 @@ public class MainActivity extends AppCompatActivity {
     @Bind(R.id.swipe_refresh)SuperSwipeRefreshLayout superSwipeRefreshLayout;
     @Bind(R.id.listView)ListView plistiview;
 
-    String base_url="http://ourex.lib.sjtu.edu.cn/primo_library/libweb/action/search.do?fn=search&tab=default_tab&vid=chinese&scp.scps=scope%3A%28SJT%29%2Cscope%3A%28sjtu_metadata%29%2Cscope%3A%28sjtu_sfx%29%2Cscope%3A%28sjtulibzw%29%2Cscope%3A%28sjtulibxw%29%2CDuxiuBook&vl%28freeText0%29=";
+//    footerview
+    ProgressBar footerProgressBar;
+    ImageView footerImageView;
+    TextView footerTextView;
+
+    String base_url="http://ourex.lib.sjtu.edu.cn/primo_library/libweb/action/search." +
+            "do?fn=search&tab=default_tab&vid=chinese&scp.scps=scope%3A%28SJT%29%2Csc" +
+            "ope%3A%28sjtu_metadata%29%2Cscope%3A%28sjtu_sfx%29%2Cscope%3A%28sjtulib" +
+            "zw%29%2Cscope%3A%28sjtulibxw%29%2CDuxiuBook&vl%28freeText0%29=";
     String url;
 
     static public List<String> NextUrls=new ArrayList<String>();
-    List<Element> book_elements=new ArrayList<Element>();
+    public List<Element> book_elements=new ArrayList<Element>();
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        String bookname=getIntent().getExtras().getString("bookname");
-        this.url=base_url+bookname;
+        get_intent_extra();
 
         plistiview.setAdapter(new BookItemAdapter(this, 0, book_elements));
         get_list_from_url(url);
-        plistiview.invalidateViews();
 
+        superSwipeRefreshLayout.setFooterView(createFootview());
         superSwipeRefreshLayout.setOnPushLoadMoreListener(new SuperSwipeRefreshLayout.OnPushLoadMoreListener() {
             @Override
             public void onLoadMore() {
                 new NextAsyncTask().execute();
-
             }
 
             @Override
@@ -61,6 +72,27 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    private void get_intent_extra() {
+        String bookname=getIntent().getExtras().getString("bookname");
+        this.url=base_url+bookname;
+    }
+
+    private View createFootview() {
+        View footerView= LayoutInflater.from(superSwipeRefreshLayout.getContext())
+            .inflate(R.layout.layout_footer,null);
+        footerProgressBar = (ProgressBar) footerView
+                .findViewById(R.id.footer_pb_view);
+        footerImageView = (ImageView) footerView
+                .findViewById(R.id.footer_image_view);
+        footerTextView = (TextView) footerView
+                .findViewById(R.id.footer_text_view);
+        footerProgressBar.setVisibility(View.GONE);
+        footerImageView.setVisibility(View.VISIBLE);
+        footerImageView.setImageResource(R.drawable.down_arrow);
+        footerTextView.setText("上拉加载更多...");
+        return footerView;
     }
 
     private void get_list_from_url(String url) {
@@ -100,6 +132,7 @@ public class MainActivity extends AppCompatActivity {
         public void onResult(Void Void) {
             plistiview.invalidateViews();
             plistiview.setSelection(saved_postion);
+            Toast.makeText(getApplicationContext(),"nextasynctask"+book_elements.size(),Toast.LENGTH_SHORT).show();
         }
 
         @Override
@@ -137,6 +170,8 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void  onResult(Elements elements) {
+//            Toast.makeText(getApplicationContext(),"refresh_url"+book_elements.size(),Toast.LENGTH_SHORT).show();
+            plistiview.invalidateViews();
             if(elements.size()!=0){
                 MainActivity.this.NextUrls.add(elements.first().attr("href"));
             }
