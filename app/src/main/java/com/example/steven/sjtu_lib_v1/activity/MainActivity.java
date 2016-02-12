@@ -54,40 +54,21 @@ public class MainActivity extends AppCompatActivity {
 
     static public List<String> NextUrls=new ArrayList<String>();
     public List<Element> book_elements=new ArrayList<Element>();
+    BookItemAdapter bookItemAdapter;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        get_intent_extra();
 
-        SwipeMenuCreator creator=new SwipeMenuCreator() {
-            @Override
-            public void create(SwipeMenu menu) {
-                SwipeMenuItem more_info=new SwipeMenuItem(getApplicationContext());
-                more_info.setBackground(new ColorDrawable(Color.rgb(0xC9,0xC9,0xCE)));
-                more_info.setWidth(dp2px(90));
-                more_info.setTitle("详细信息");
-                more_info.setTitleSize(18);
-                more_info.setTitleColor(Color.WHITE);
-                menu.addMenuItem(more_info);
-            }
-        };
-        plistiview.setMenuCreator(creator);
-        plistiview.setAdapter(new BookItemAdapter(this, 0, book_elements));
-        plistiview.setOnMenuItemClickListener(new SwipeMenuListView.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(int position, SwipeMenu menu, int index) {
-                switch (index){
-                    case 0:
-                        show_detail_info(position);
-                }
-                return false;
-            }
-        });
+        get_intent_extra();
+        plistview_init();
+        superSwipelayout_init();
 
         get_list_from_url(url);
+    }
 
+    private void superSwipelayout_init() {
         superSwipeRefreshLayout.setFooterView(createFootview());
         superSwipeRefreshLayout.setOnPushLoadMoreListener(new SuperSwipeRefreshLayout.OnPushLoadMoreListener() {
             @Override
@@ -103,6 +84,34 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onPushEnable(boolean enable) {
 
+            }
+        });
+    }
+
+    private void plistview_init() {
+        SwipeMenuCreator creator=new SwipeMenuCreator() {
+            @Override
+            public void create(SwipeMenu menu) {
+                SwipeMenuItem more_info=new SwipeMenuItem(getApplicationContext());
+                more_info.setBackground(new ColorDrawable(Color.rgb(0xC9, 0xC9, 0xCE)));
+                more_info.setWidth(dp2px(90));
+                more_info.setTitle("详细信息");
+                more_info.setTitleSize(18);
+                more_info.setTitleColor(Color.WHITE);
+                menu.addMenuItem(more_info);
+            }
+        };
+        plistiview.setMenuCreator(creator);
+        bookItemAdapter=new BookItemAdapter(this, 0, book_elements);
+        plistiview.setAdapter(bookItemAdapter);
+        plistiview.setOnMenuItemClickListener(new SwipeMenuListView.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(int position, SwipeMenu menu, int index) {
+                switch (index) {
+                    case 0:
+                        show_detail_info(position);
+                }
+                return false;
             }
         });
     }
@@ -181,6 +190,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @OnItemClick(R.id.listView) void onItemSelected(int position){
+        Toast.makeText(getApplicationContext(),book_elements.size()+"",Toast.LENGTH_SHORT).show();
         Book_detail bookDetail=new Book_detail(book_elements.get(position));
         bookDetail.show(getFragmentManager(), "book");
     }
@@ -190,7 +200,8 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onResult(Void Void) {
-            plistiview.invalidateViews();
+//            plistiview.invalidateViews();
+            bookItemAdapter.notifyDataSetChanged();
             plistiview.setSelection(saved_postion);
             Toast.makeText(getApplicationContext(),"nextasynctask"+book_elements.size(),Toast.LENGTH_SHORT).show();
         }
@@ -214,7 +225,6 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onPrepare() {
-//            saved_postion=wholeBooks.size()-1;
             saved_postion=plistiview.getFirstVisiblePosition();
         }
     }
@@ -230,8 +240,8 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void  onResult(Elements elements) {
-//            Toast.makeText(getApplicationContext(),"refresh_url"+book_elements.size(),Toast.LENGTH_SHORT).show();
-            plistiview.invalidateViews();
+//            plistiview.invalidateViews();
+            bookItemAdapter.notifyDataSetChanged();
             if(elements.size()!=0){
                 MainActivity.this.NextUrls.add(elements.first().attr("href"));
             }
