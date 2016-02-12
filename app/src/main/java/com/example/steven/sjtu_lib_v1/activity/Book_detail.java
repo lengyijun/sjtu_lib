@@ -40,7 +40,6 @@ public class Book_detail extends DialogFragment{
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-//        out_in.add("hello");
         parse_element();
         LayoutInflater inflater=getActivity().getLayoutInflater();
         View view=inflater.inflate(R.layout.location_info,null);

@@ -69,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void superSwipelayout_init() {
+        superSwipeRefreshLayout.setTargetScrollWithLayout(false);
         superSwipeRefreshLayout.setFooterView(createFootview());
         superSwipeRefreshLayout.setOnPushLoadMoreListener(new SuperSwipeRefreshLayout.OnPushLoadMoreListener() {
             @Override
@@ -190,7 +191,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @OnItemClick(R.id.listView) void onItemSelected(int position){
-        Toast.makeText(getApplicationContext(),book_elements.size()+"",Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(),book_elements.size()+"<<"+position,Toast.LENGTH_SHORT).show();
         Book_detail bookDetail=new Book_detail(book_elements.get(position));
         bookDetail.show(getFragmentManager(), "book");
     }
@@ -200,8 +201,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onResult(Void Void) {
-//            plistiview.invalidateViews();
-            bookItemAdapter.notifyDataSetChanged();
+            plistiview.invalidateViews();
             plistiview.setSelection(saved_postion);
             Toast.makeText(getApplicationContext(),"nextasynctask"+book_elements.size(),Toast.LENGTH_SHORT).show();
         }
@@ -239,8 +239,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void  onResult(Elements elements) {
-//            plistiview.invalidateViews();
-            bookItemAdapter.notifyDataSetChanged();
+            plistiview.invalidateViews();
             if(elements.size()!=0){
                 NextUrls=elements.first().attr("href");
             }
