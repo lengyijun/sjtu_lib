@@ -34,14 +34,16 @@ public class BookItemAdapter extends ArrayAdapter<Element> {
         String cover_image_url=get_cover_image_url(complete_info);
         String book_name=get_book_name(complete_info);
 
-        View view= LayoutInflater.from(getContext()).inflate(R.layout.item,null);
-        TextView tv= (TextView) view.findViewById(R.id.textView2);
-        NetworkImageView book_cover= (NetworkImageView) view.findViewById(R.id.book_cover);
+        if(convertView==null){
+            convertView= LayoutInflater.from(getContext()).inflate(R.layout.item,null);
+        }
+        TextView tv= (TextView) convertView.findViewById(R.id.textView2);
+        NetworkImageView book_cover= (NetworkImageView) convertView.findViewById(R.id.book_cover);
 
         tv.setText(book_name);
         book_cover.setImageUrl(cover_image_url,mImageloader);
 
-        return view;
+        return convertView;
     }
 
     private String get_book_name(Element complete_info) {

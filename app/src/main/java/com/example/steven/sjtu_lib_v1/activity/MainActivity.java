@@ -201,7 +201,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onResult(Void Void) {
-            plistiview.invalidateViews();
+            bookItemAdapter.notifyDataSetChanged();
             plistiview.setSelection(saved_postion);
             Toast.makeText(getApplicationContext(),"nextasynctask"+book_elements.size(),Toast.LENGTH_SHORT).show();
         }
@@ -239,7 +239,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void  onResult(Elements elements) {
-            plistiview.invalidateViews();
+            bookItemAdapter.notifyDataSetChanged();
             if(elements.size()!=0){
                 NextUrls=elements.first().attr("href");
             }
