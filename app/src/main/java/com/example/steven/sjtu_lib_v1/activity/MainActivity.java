@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
             "zw%29%2Cscope%3A%28sjtulibxw%29%2CDuxiuBook&vl%28freeText0%29=";
     String url;
 
-    static public List<String> NextUrls=new ArrayList<String>();
+    String NextUrls;
     public List<Element> book_elements=new ArrayList<Element>();
     BookItemAdapter bookItemAdapter;
 
@@ -209,7 +209,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public Void onTask(Void... params) {
             synchronized (this){
-                while (NextUrls.size() == 0 || book_elements.size() == 0) {
+                while (NextUrls.length() == 0 || book_elements.size() == 0) {
                     try {
                         Thread.sleep(1000);
                     } catch (InterruptedException e) {
@@ -217,8 +217,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
             }
-            get_list_from_url(NextUrls.get(0));
-            NextUrls.clear();
+            get_list_from_url(NextUrls);
 
             return null;
         }
@@ -243,7 +242,7 @@ public class MainActivity extends AppCompatActivity {
 //            plistiview.invalidateViews();
             bookItemAdapter.notifyDataSetChanged();
             if(elements.size()!=0){
-                MainActivity.this.NextUrls.add(elements.first().attr("href"));
+                NextUrls=elements.first().attr("href");
             }
         }
 
