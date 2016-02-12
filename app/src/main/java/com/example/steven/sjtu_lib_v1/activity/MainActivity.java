@@ -192,7 +192,7 @@ public class MainActivity extends AppCompatActivity {
 
     @OnItemClick(R.id.listView) void onItemSelected(int position){
         Toast.makeText(getApplicationContext(),book_elements.size()+"<<"+position,Toast.LENGTH_SHORT).show();
-        Book_detail bookDetail=new Book_detail(book_elements.get(position));
+        Book_detail_dialog bookDetail=new Book_detail_dialog(book_elements.get(position));
         bookDetail.show(getFragmentManager(), "book");
     }
 

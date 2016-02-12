@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.example.steven.sjtu_lib_v1.R;
 import com.zhy.http.okhttp.OkHttpUtils;
@@ -29,14 +30,14 @@ import okhttp3.Call;
 /**
  * Created by steven on 2016/2/6.
  */
-public class Book_detail extends DialogFragment{
+public class Book_detail_dialog extends DialogFragment{
     @Bind(R.id.listView) ListView lv;
+    @Bind(R.id.call_number)TextView call_num;
 
     String base_url="http://ourex.lib.sjtu.edu.cn/primo_library/libweb/action/";
     String book_name;
     Element element;
     List<String> out_in =new ArrayList<String>();
-    String link_to_detail;
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -45,7 +46,7 @@ public class Book_detail extends DialogFragment{
         View view=inflater.inflate(R.layout.location_info,null);
         ButterKnife.bind(this,view);
 
-        lv.setAdapter(new ArrayAdapter<String>(getActivity(),R.layout.list_white_text,out_in));
+        lv.setAdapter(new ArrayAdapter<String>(getActivity(), R.layout.list_white_text, out_in));
         AlertDialog.Builder builder=new AlertDialog.Builder(getActivity())
             .setTitle(book_name)
             .setView(view);
@@ -55,12 +56,12 @@ public class Book_detail extends DialogFragment{
 //    获得馆藏信息的url
     private void parse_element() {
         book_name=element.getElementsByClass("EXLResultTitle").text();
-        link_to_detail=element.getElementsMatchingText("馆藏信息").attr("href");
+        String link_to_detail=element.getElementsMatchingText("馆藏信息").attr("href");
         link_to_detail=base_url+link_to_detail;
-        find_in_out();
+        find_in_out(link_to_detail);
     }
 
-    private void find_in_out() {
+    private void find_in_out(String link_to_detail) {
         OkHttpUtils .get()
                     .url(link_to_detail)
                     .build()
@@ -74,13 +75,14 @@ public class Book_detail extends DialogFragment{
                         public void onResponse(String response) {
                             Document document = Jsoup.parse(response);
                             Elements elements = document.getElementsByClass("EXLLocationTableColumn3");
-//                            表示在多个图书馆有此书信息
+//                            表示只在一个图书馆有此书信息
                             if (!elements.isEmpty()) {
+                                get_call_number_singlelib(document);
                                 for (Element i : elements) {
                                     out_in.add(i.text());
                                 }
                                 lv.invalidateViews();
-                            } else {
+                            } else {             // 表示在多个图书馆有此书信息
                                 List<String> link_list = new ArrayList<String>();
                                 Elements link_elm = document.getElementsByClass("EXLLocationsIcon");
                                 for (Element i : link_elm) {
@@ -93,6 +95,11 @@ public class Book_detail extends DialogFragment{
                         }
                     });
 
+    }
+
+    private void get_call_number_singlelib(Document document) {
+        Element ele=document.getElementsByClass("EXLLocationTableColumn1").first();
+        call_num.setText(ele.text());
     }
 
     private void get_location_from_linklist(List<String> link_list) {
@@ -117,6 +124,8 @@ public class Book_detail extends DialogFragment{
                         String first_modification=doc.getElementsByTag("modification").first().text();
                         Document modi_html=Jsoup.parse(first_modification, "", Parser.htmlParser());
                         Elements fin_eles=modi_html.getElementsByClass("EXLLocationTableColumn3");
+
+                        get_call_number_singlelib(modi_html);
                         for(Element i:fin_eles){
                             out_in.add(i.text());
                         }
@@ -126,7 +135,7 @@ public class Book_detail extends DialogFragment{
                 });
     }
 
-    public Book_detail(Element element) {
+    public Book_detail_dialog(Element element) {
         this.element=element;
     }
 }
