@@ -138,15 +138,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void get_intent_extra() {
-        String bookname=getIntent().getExtras().getString("bookname");
         String url_intent=getIntent().getExtras().getString("url");
-        if (bookname!=null){
-            this.url=base_url+bookname;
-        }else{
-            if(url_intent!=null){
-                this.url=url_intent;
-            }
-        }
+        this.url=url_intent;
     }
 
     private View createFootview() {
