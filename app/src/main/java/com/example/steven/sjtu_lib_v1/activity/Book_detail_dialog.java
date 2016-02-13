@@ -6,11 +6,11 @@ import android.app.DialogFragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.steven.sjtu_lib_v1.R;
+import com.example.steven.sjtu_lib_v1.adapter.Dialog_adapter;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.StringCallback;
 
@@ -38,6 +38,7 @@ public class Book_detail_dialog extends DialogFragment{
     String book_name;
     Element element;
     List<String> out_in =new ArrayList<String>();
+    List<Element> loc_sta=new ArrayList<Element>();
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -46,7 +47,9 @@ public class Book_detail_dialog extends DialogFragment{
         View view=inflater.inflate(R.layout.location_info,null);
         ButterKnife.bind(this,view);
 
-        lv.setAdapter(new ArrayAdapter<String>(getActivity(), R.layout.list_white_text, out_in));
+//        lv.setAdapter(new ArrayAdapter<String>(getActivity(), R.layout.list_white_text, out_in));
+        Dialog_adapter dialog_adapter=new Dialog_adapter(getActivity(),0,loc_sta);
+        lv.setAdapter(dialog_adapter);
         AlertDialog.Builder builder=new AlertDialog.Builder(getActivity())
             .setTitle(book_name)
             .setView(view);
@@ -77,10 +80,13 @@ public class Book_detail_dialog extends DialogFragment{
                             Elements elements = document.getElementsByClass("EXLLocationTableColumn3");
 //                            表示只在一个图书馆有此书信息
                             if (!elements.isEmpty()) {
-                                get_call_number_singlelib(document);
-                                for (Element i : elements) {
-                                    out_in.add(i.text());
+                                for (Element i:elements){
+                                    loc_sta.add(i.parent());
                                 }
+                                get_call_number_singlelib(document);
+//                                for (Element i : elements) {
+//                                    out_in.add(i.text());
+//                                }
                                 lv.invalidateViews();
                             } else {             // 表示在多个图书馆有此书信息
                                 List<String> link_list = new ArrayList<String>();
@@ -127,7 +133,8 @@ public class Book_detail_dialog extends DialogFragment{
 
                         get_call_number_singlelib(modi_html);
                         for(Element i:fin_eles){
-                            out_in.add(i.text());
+                            loc_sta.add(i.parent());
+//                            out_in.add(i.text());
                         }
                         lv.invalidateViews();
 
