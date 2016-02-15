@@ -34,7 +34,7 @@ public class Book_detail_dialog extends DialogFragment{
     @Bind(R.id.listView) ListView lv;
     @Bind(R.id.call_number)TextView call_num;
 
-    String base_url="http://ourex.lib.sjtu.edu.cn/primo_library/libweb/action/";
+    public static String base_url="http://ourex.lib.sjtu.edu.cn/primo_library/libweb/action/";
     String book_name;
     Element element;
     List<String> out_in =new ArrayList<String>();
@@ -93,7 +93,7 @@ public class Book_detail_dialog extends DialogFragment{
                                 Elements link_elm = document.getElementsByClass("EXLLocationsIcon");
                                 for (Element i : link_elm) {
                                     String temp_link = i.attr("href");
-                                    temp_link = "http://ourex.lib.sjtu.edu.cn/primo_library/libweb/action/" + temp_link;
+                                    temp_link = base_url+ temp_link;
                                     link_list.add(temp_link);
                                 }
                                 get_location_from_linklist(link_list);

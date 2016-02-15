@@ -47,10 +47,6 @@ public class MainActivity extends AppCompatActivity {
     ImageView footerImageView;
     TextView footerTextView;
 
-    String base_url="http://ourex.lib.sjtu.edu.cn/primo_library/libweb/action/search." +
-            "do?fn=search&tab=default_tab&vid=chinese&scp.scps=scope%3A%28SJT%29%2Csc" +
-            "ope%3A%28sjtu_metadata%29%2Cscope%3A%28sjtu_sfx%29%2Cscope%3A%28sjtulib" +
-            "zw%29%2Cscope%3A%28sjtulibxw%29%2CDuxiuBook&vl%28freeText0%29=";
     String url;
 
     String NextUrls;
@@ -120,16 +116,20 @@ public class MainActivity extends AppCompatActivity {
 
     private void show_detail_info(int position) {
         Element doc=book_elements.get(position);
+//       多版本的处理
         Elements MultipleLink=doc.getElementsByClass("EXLBriefResultsDisplayMultipleLink");
         Intent intent=new Intent();
+
         if(MultipleLink.isEmpty()){
             Element tosend=doc.getElementsByClass("EXLSummaryContainer").first();
             tosend.getElementsByTag("script").remove();
-            tosend.getElementsByClass("EXLResultAvailability").remove();
             tosend.getElementsByTag("noscript").remove();
-            
-            intent.setClass(MainActivity.this,Single_detail.class);
+            tosend.getElementsByClass("EXLResultAvailability").remove();
+
+            String url=Book_detail_dialog.base_url+doc.getElementsMatchingText("馆藏信息").attr("href");
+            intent.setClass(MainActivity.this, Single_detail.class);
             intent.putExtra("detail", tosend.toString());
+            intent.putExtra("url",url);
             startActivity(intent);
         }else {
             intent.setClass(MainActivity.this,MainActivity.class);
@@ -180,6 +180,7 @@ public class MainActivity extends AppCompatActivity {
                                 book_elements.add(i);
                             }
                         }
+                        MainActivity.this.setTitle("已加载了" + book_elements.size() + "本书");
                     }
                 });
     }
@@ -196,7 +197,7 @@ public class MainActivity extends AppCompatActivity {
         Context context;
 
         public NextAsyncTask(MainActivity mainActivity) {
-           this.activity=mainActivity;
+            this.activity=mainActivity;
             this.context=activity;
             dialog=new Loading_dialog(mainActivity);
         }
@@ -204,7 +205,6 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onResult(Void Void) {
             bookItemAdapter.notifyDataSetChanged();
-            plistiview.setSelection(saved_postion);
             dialog.dismiss();
         }
 
