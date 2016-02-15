@@ -1,5 +1,6 @@
 package com.example.steven.sjtu_lib_v1.activity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -74,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         superSwipeRefreshLayout.setOnPushLoadMoreListener(new SuperSwipeRefreshLayout.OnPushLoadMoreListener() {
             @Override
             public void onLoadMore() {
-                new NextAsyncTask().execute();
+                new NextAsyncTask(MainActivity.this).execute();
             }
 
             @Override
@@ -184,19 +185,27 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @OnItemClick(R.id.listView) void onItemSelected(int position){
-        Toast.makeText(getApplicationContext(),book_elements.size()+"<<"+position,Toast.LENGTH_SHORT).show();
         Book_detail_dialog bookDetail=new Book_detail_dialog(book_elements.get(position));
         bookDetail.show(getFragmentManager(), "book");
     }
 
     public class NextAsyncTask extends MultiAsynctask<Void,Void,Void> {
+        MainActivity activity;
         int saved_postion;
+        Loading_dialog dialog;
+        Context context;
+
+        public NextAsyncTask(MainActivity mainActivity) {
+           this.activity=mainActivity;
+            this.context=activity;
+            dialog=new Loading_dialog(mainActivity);
+        }
 
         @Override
         public void onResult(Void Void) {
             bookItemAdapter.notifyDataSetChanged();
             plistiview.setSelection(saved_postion);
-            Toast.makeText(getApplicationContext(),"nextasynctask"+book_elements.size(),Toast.LENGTH_SHORT).show();
+            dialog.dismiss();
         }
 
         @Override
@@ -218,6 +227,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onPrepare() {
             saved_postion=plistiview.getFirstVisiblePosition();
+            dialog.show();
         }
     }
 
