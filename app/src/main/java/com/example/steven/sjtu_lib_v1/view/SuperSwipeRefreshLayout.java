@@ -509,11 +509,11 @@ public class SuperSwipeRefreshLayout extends ViewGroup {
                                 - getPaddingTop() - getPaddingBottom(),
                         MeasureSpec.EXACTLY));
         mHeadViewContainer.measure(MeasureSpec.makeMeasureSpec(
-                mHeaderViewWidth, MeasureSpec.EXACTLY), MeasureSpec
-                .makeMeasureSpec(3 * mHeaderViewHeight, MeasureSpec.EXACTLY));
+				mHeaderViewWidth, MeasureSpec.EXACTLY), MeasureSpec
+				.makeMeasureSpec(3 * mHeaderViewHeight, MeasureSpec.EXACTLY));
         mFooterViewContainer.measure(MeasureSpec.makeMeasureSpec(
-                mFooterViewWidth, MeasureSpec.EXACTLY), MeasureSpec
-                .makeMeasureSpec(mFooterViewHeight, MeasureSpec.EXACTLY));
+				mFooterViewWidth, MeasureSpec.EXACTLY), MeasureSpec
+				.makeMeasureSpec(mFooterViewHeight, MeasureSpec.EXACTLY));
         if (!mUsingCustomStart && !mOriginalOffsetCalculated) {
             mOriginalOffsetCalculated = true;
             mCurrentTargetOffsetTop = mOriginalOffsetTop = -mHeadViewContainer
@@ -1021,11 +1021,11 @@ public class SuperSwipeRefreshLayout extends ViewGroup {
     public void resetTargetLayoutDelay(int delay) {
         new Handler().postDelayed(new Runnable() {
 
-            @Override
-            public void run() {
-                resetTargetLayout();
-            }
-        }, delay);
+			@Override
+			public void run() {
+				resetTargetLayout();
+			}
+		}, delay);
     }
 
     /**

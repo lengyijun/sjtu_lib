@@ -67,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void superSwipelayout_init() {
         superSwipeRefreshLayout.setTargetScrollWithLayout(false);
+        superSwipeRefreshLayout.setHeaderView(null);
         superSwipeRefreshLayout.setFooterView(createFootview());
         superSwipeRefreshLayout.setOnPushLoadMoreListener(new SuperSwipeRefreshLayout.OnPushLoadMoreListener() {
             @Override
@@ -86,6 +87,22 @@ public class MainActivity extends AppCompatActivity {
             public void onPushEnable(boolean enable) {
                 footerTextView.setText(enable ? "松开加载" : "上拉加载");
                 footerImageView.setVisibility(View.VISIBLE);
+            }
+        });
+        superSwipeRefreshLayout.setOnPullRefreshListener(new SuperSwipeRefreshLayout.OnPullRefreshListener() {
+            @Override
+            public void onRefresh() {
+            }
+
+            @Override
+            public void onPullDistance(int distance) {
+                superSwipeRefreshLayout.setRefreshing(false);
+
+            }
+
+            @Override
+            public void onPullEnable(boolean enable) {
+
             }
         });
     }
