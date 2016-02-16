@@ -15,5 +15,6 @@
         android:id="@+id/listview_table"
         android:layout_gravity="center_vertical"
         android:dividerHeight="20dp"
+        android:divider="@color/white"
         android:layout_weight="1" />
 </LinearLayout>
