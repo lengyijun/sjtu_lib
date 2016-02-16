@@ -71,6 +71,9 @@ public class MainActivity extends AppCompatActivity {
         superSwipeRefreshLayout.setOnPushLoadMoreListener(new SuperSwipeRefreshLayout.OnPushLoadMoreListener() {
             @Override
             public void onLoadMore() {
+                footerTextView.setText("正在加载...");
+                footerImageView.setVisibility(View.GONE);
+                footerProgressBar.setVisibility(View.VISIBLE);
                 new NextAsyncTask(MainActivity.this).execute();
             }
 
@@ -81,7 +84,8 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onPushEnable(boolean enable) {
-
+                footerTextView.setText(enable ? "松开加载" : "上拉加载");
+                footerImageView.setVisibility(View.VISIBLE);
             }
         });
     }
@@ -206,6 +210,7 @@ public class MainActivity extends AppCompatActivity {
         public void onResult(Void Void) {
             bookItemAdapter.notifyDataSetChanged();
             dialog.dismiss();
+            superSwipeRefreshLayout.setLoadMore(false);
         }
 
         @Override
