@@ -1,0 +1,1766 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- full_results_stdlayout.jsp begin -->
+<!-- taglibsIncludeAll.jspf begin -->
+<!-- taglibsIncludeAll.jspf end --><!-- begin resolveLocale.jsp -->
+<!-- taglibsIncludeAll.jspf begin -->
+<!-- taglibsIncludeAll.jspf end --><!-- locale=zh_CN -->
+
+<!-- end resolveLocale.jsp -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+<!-- custom_full_results_header_info.jsp begin -->
+<!-- taglibsIncludeAll.jspf begin -->
+<!-- taglibsIncludeAll.jspf end --><!-- custom_tile_variables.jsp begin -->
+<!-- taglibsIncludeAll.jspf begin -->
+<!-- taglibsIncludeAll.jspf end --><!-- custom_tile_variables.jsp end -->
+<!-- advancedCssAdder.jsp begin -->
+<!-- taglibsIncludeAll.jspf begin -->
+<!-- taglibsIncludeAll.jspf end --><!-- cssAdder.jsp begin -->
+<!-- taglibsIncludeAll.jspf begin -->
+<!-- taglibsIncludeAll.jspf end --><!-- This is just for dev mode - it preserves old css behaviour to allow the customers to understand the css hierarchy  -->
+<link rel="stylesheet" type="text/css" href="../wro/primo_library_css.css?"/>
+<script type="text/javascript" src="../wro/primo_library_css.js"></script>
+<link rel="apple-touch-icon" href="../images/favicon.png" />
+
+
+<!-- cssAdder.jsp end -->
+<!-- advancedCssAdder.jsp end --><script type="text/javascript" src="../wro/primo_library_web.js"></script>
+<script type="text/javascript">
+	Date.format = 'mm/dd/yy';
+	Date.monthNames = ['&#19968;&#26376;', '&#20108;&#26376;', '&#19977;&#26376;', '&#22235;&#26376;', '&#20116;&#26376;', '&#20845;&#26376;', '&#19971;&#26376;', '&#20843;&#26376;','&#20061;&#26376;', '&#21313;&#26376;', '&#21313;&#19968;&#26376;', '&#21313;&#20108;&#26376;'];
+
+	$.dpText = {
+		TEXT_PREV_YEAR		:	'上一年',
+		TEXT_PREV_MONTH		:	'前一个月',
+		TEXT_NEXT_YEAR		:	'下一年',
+		TEXT_NEXT_MONTH		:	'下个月',
+		TEXT_CLOSE			:	'关闭日历',
+		TEXT_CHOOSE_DATE	:	'Choose date',
+		TEXT_NEXT			:	'下一页',
+		TEXT_PREV			:	'上一页',
+		HEADER_FORMAT		:	'mmmm yyyy'
+	};
+</script>
+<!--[if IE]><script type="text/javascript" src="../javascript/jquery.bgiframe.js"></script><![endif]-->
+
+
+
+<title>Version control with Git = Git版本控制 - 上海交通大学图书馆</title>
+<script type="text/javascript">
+		addLoadEvent(function(){updateFullRTA();});
+	</script>
+<!-- custom_full_results_header_info.jsp end -->
+<!-- begin javascriptTextIncludes.jsp -->
+<!-- taglibsIncludeAll.jspf begin -->
+<!-- taglibsIncludeAll.jspf end --><script type="text/javascript">
+
+var exlTabReloadMessage = '加载你的内容可能需要较长时间。如果你想重新加载，';
+
+
+var exlTabReloadLinkText = '点击此处';
+
+
+var exlTabLoadErrorMessage = '加载标签页出错';
+
+
+var exlDelayTabProcessingYourRequest = '正在处理你的请求...'; //Processing your request...
+
+
+var exlFdbReloadMessage = '您的检索耗时过长，请返回到前一页。';
+
+
+var exlFdbReloadLinkText = '点击这里';
+
+
+var exlFdbNoInfoMessage = '无可获取信息';
+
+
+var exlFdbSubCategoryLabel = '子类别';
+
+
+var exlTabSignInMessage = '登录后再提交评论';
+
+
+var facetsTitleLabel = '精简检索结果';
+
+
+var updatingMessage = '正在更新。。。';
+
+</script>
+<!-- end javascriptTextIncludes.jsp -->
+<script type="text/javascript" src="http://localhost:809/js_before/jquery2.js"></script>
+<script type="text/javascript" src="http://localhost:809/js_before/param.js"></script>
+<script type="text/javascript" src="http://localhost:809/js_before/user_panel2.js"></script>
+<script type="text/javascript" src="http://localhost:809/js_before/filter2.js"></script>
+</head>
+<body class="EXLFullView EXLCurrentLang_zh_CN">
+<div id="content" class="EXLContent EXLFullDisplay">
+<div id="exlidSkipToContent" class="EXLSkipToContent">
+    <!-- taglibsIncludeAll.jspf begin -->
+<!-- taglibsIncludeAll.jspf end --><a id="exliidSkipToMainContent" href="#exlidResultsContainer">skip to main content</a></div>
+<div id="exlidHeaderContainer" class="EXLHeader">
+    <div id="exlidHeaderTile" class="EXLLogo">
+        <!-- taglibsIncludeAll.jspf begin -->
+<!-- taglibsIncludeAll.jspf end --><!-- includeStaticHTML.jspf begin (/static_htmls/chinese/header.html) -->
+<!-- taglibsIncludeAll.jspf begin -->
+<!-- taglibsIncludeAll.jspf end -->﻿<!--NB: When translating a static html page that includes images, the link of the image must be replaced as follows:
+The existing link: "../images/imageName.gif" must be changed into: "../locale/specifcLocaleCode/images/imageName.gif" where "specifcLocaleCode" represents the relevant locale of the language (e.g en_US for English USA, zh_CH for Chinese).
+-->
+<script src="../javascript/userchi.js"></script>
+<script src="../javascript/sha2.js"></script>
+<script src="../javascript/exlchi.js"></script>
+<script src="../javascript/qr.js"></script>
+<script type='text/javascript' src='http://ss.zhizhen.com/js/highcharts/highstock.js'></script>
+<script type='text/javascript' src='http://ss.zhizhen.com/js/highcharts/exporting_highstock.js'></script>
+<script type='text/javascript' src='http://ss.zhizhen.com/js/highcharts/highstockdata.js'></script>
+<script type='text/javascript' src='http://ss.zhizhen.com/js/highcharts/highchartsdata.js'></script>
+<script type='text/javascript' src='http://ss.zhizhen.com/js/highcharts/drawpic.js'></script>
+
+<link rel="stylesheet" type="text/css" href="../css/chinese.css"/>
+<div id="header">
+<div class="square">
+</div>
+
+<div class="logo">
+  <h1><a href="search.do?vid=chinese"><img src="../css/chinese_img/logo.png" align="right" alt="Our Explore 思源探索" title="返回首页" /></a></h1>
+</div>
+</div>
+<div id="side-left"></div>
+<div id="sidebar">
+<div class="sb-nav">
+</div>
+</div>
+<div id="side-right">
+<div class="top"> </div>
+</div>
+<!-- includeStaticHTML.jspf end (/static_htmls/chinese/header.html) --></div>
+    <div id="exlidUserAreaTile" class="EXLUserMenu">
+        <!-- taglibsIncludeAll.jspf begin -->
+<!-- taglibsIncludeAll.jspf end --><!-- setSearchForm.jspf begin -->
+<!-- taglibsIncludeAll.jspf begin -->
+<!-- taglibsIncludeAll.jspf end --><!-- setSearchForm.jspf end --><!-- this feedback unnecesary
+
+-->
+
+<input type="hidden" class="gatherpagestat" value="true" />
+
+<!-- For Alma Services Page -->
+<input type="hidden" class="EXLTabBoomId" id="SignInStatUserArea" 
+		value="A=Primo_Local&amp;I=SJT&amp;S=68559BAB8F7B9A06C7BC6EB08A742CB7&amp;IP=202.121.183.49&amp;SRVR=primofe.lib.sjtu.edu.cn&amp;P=sign-in&amp;OP=click&amp;M=&amp;TYP=Page_View_4.1.1.131211&amp;G=&amp;O=%26%26%26%26SJT%26上海交通大学图书馆%26%26&amp;O1=&amp;O2=sjtulibxw&amp;O3=&amp;O4=&amp;O5=PRD.86SJT.SJT&amp;O6=&amp;O7=0&amp;O8=&amp;O9=&amp;" />
+<input type="hidden" class="boombaseurl" value="http://beacon01.alma.exlibrisgroup.com/boom/apache_pb.gif" />
+
+<input type="hidden" class="gatherpagestat" value="true" />
+
+<!-- For Alma Services Page -->
+<input type="hidden" class="EXLTabBoomId" id="SignOutStat" 
+		value="A=Primo_Local&amp;I=SJT&amp;S=68559BAB8F7B9A06C7BC6EB08A742CB7&amp;IP=202.121.183.49&amp;SRVR=primofe.lib.sjtu.edu.cn&amp;P=sign-out&amp;OP=click&amp;M=&amp;TYP=Page_View_4.1.1.131211&amp;G=&amp;O=%26%26%26%26SJT%26上海交通大学图书馆%26%26&amp;O1=&amp;O2=sjtulibxw&amp;O3=&amp;O4=&amp;O5=PRD.86SJT.SJT&amp;O6=&amp;O7=0&amp;O8=&amp;O9=&amp;" />
+<input type="hidden" class="boombaseurl" value="http://beacon01.alma.exlibrisgroup.com/boom/apache_pb.gif" />
+
+<ul id="exlidUserAreaRibbon" class="EXLEShelfTileGuest">
+  <li id="exlidUserName" class="EXLUserName">
+  	<span class="EXLUserAreaStart"></span>
+  	<span class="EXLUserNameDisplay">
+  		匿名用户</span>
+  	<span class="EXLUserAreaStartRtl"></span>
+  </li>
+  <li id="exlidMyShelf" class="EXLMyShelf"><a href="basket.do?fn=display&amp;fromUserArea=true&amp;vid=chinese&amp;fromPreferences=false"><span class="EXLMyShelfStarSelected"></span>我的电子书架</a></li>
+  <li id="exlidMyAccount" class="EXLMyAccount"><a href="myAccountMenu.do?vid=chinese">我的借阅信息</a></li>
+  
+<li id="exlidSignOut" class="EXLSignOut EXLLastItem EXLHidden"><a href="" onclick="boomCallToRum('SignOutStat',false);">退出登录</a></li>
+	<li id="exlidSignIn" class="EXLSignOut EXLLastItem ">
+	  			<a href="login.do?loginFn=signin&amp;vid=chinese&amp;targetURL=http%3a%2f%2fourex.lib.sjtu.edu.cn%3a80%2fprimo_library%2flibweb%2faction%2fdisplay.do%3fdscnt%3d0%26amp%3belementId%3d0%26amp%3brecIdxs%3d0%26amp%3bfrbrVersion%3d3%26amp%3bscp.scps%3dscope%253A%2528SJT%2529%252Cscope%253A%2528sjtu_metadata%2529%252Cscope%253A%2528sjtu_sfx%2529%252Cscope%253A%2528sjtulibzw%2529%252Cscope%253A%2528sjtulibxw%2529%252CDuxiuBook%26amp%3bdisplayMode%3dfull%26amp%3btab%3ddefault_tab%26amp%3bdstmp%3d1455332763115%26amp%3bct%3ddisplay%26amp%3bgathStatTab%3dtrue%26amp%3bindx%3d1%26amp%3brecIds%3dsjtulibxw000311379%26amp%3brenderMode%3dpoppedOut%26amp%3bdoc%3dsjtulibxw000311379%26amp%3bvl(freeText0)%3dgit%26amp%3bvid%3dchinese%26amp%3bfn%3dsearch%26amp%3btabs%3dlocationsTab%26amp%3binitializeIndex%3dtrue" onclick="boomCallToRum('SignInStatUserArea',false);addResolutionParam(this);">登录系统</a>
+  				&nbsp; </li>	  			  		
+
+</ul>
+
+</div>
+    <div id="exlidMainMenuTile" class="EXLMainMenu">
+        <!-- taglibsIncludeAll.jspf begin -->
+<!-- taglibsIncludeAll.jspf end --><script type="text/javascript">
+//<![CDATA[
+function loadSearchDbPage(){
+	var fn;
+	addLightBoxDivs();
+	fn='loadSearchDbPage';
+	var timestamp = new Date().getTime();
+	var url = "searchDB.do"+"?fn="+fn+"&ts="+timestamp;
+	var data;
+	$.ajax({
+	    url:url,
+		data:data,
+		global:false,
+		beforeSend: function(request){
+			setAjaxRequestHeader(request);
+		},
+		error: function(request,errorType,exceptionOcurred){
+			if (errorType=='timeout'){
+				notifyAjaxTimeout();
+			}else{
+				generalAjaxError();
+			}
+			document.getElementById('exliLoadingFdb').style.display='none';
+			document.getElementById('exliGreyOverlay').style.display='none';
+			document.getElementById('exliWhiteContent').style.display='none';
+			return false;
+		},
+		success: function(data){
+			if (isAjaxXmlRedirect(data)){
+				handleAjaxXmlRedirect(data);
+			}
+			var elm = $(data).find('searchDbXml');
+			var cdata = $(elm).text();
+			$('span[id=exliLoadingFdbSpan]').remove();
+			var n;
+			n = document.getElementById("exliWhiteContent");
+			var xmlText = cdata.replace(/\n\n/g, "\n").replace(/&lt;/g,"<").replace(/&gt;/g,">");
+			var newdiv = document.createElement("div");
+			newdiv.innerHTML = xmlText;
+			n.innerHTML='';
+			$(n).append(newdiv);
+		}
+	});
+}
+
+
+
+
+
+
+// ]]>
+</script>
+<noscript>This feature requires javascript</noscript><!--  include setSearchForm.jspf before -->
+<!-- setSearchForm.jspf begin -->
+<!-- taglibsIncludeAll.jspf begin -->
+<!-- taglibsIncludeAll.jspf end --><!-- setSearchForm.jspf end --><!--  include setSearchForm.jspf after   -->
+
+<div id="exlidMainMenuContainer" class="EXLMainMenuContainer EXLFirstItem">
+  <ul id="exlidMainMenuRibbon">
+<li id="exlidMainMenuItem1" class="EXLMainMenuItem">
+			<span><a title="检索首页"
+			   		href="/primo_library/libweb/action/search.do?menuitem=0&amp;fromTop=true&amp;fromPreferences=false&amp;fromEshelf=false&amp;vid=chinese"
+			   		class="selected EXLMainMenuSelected EXLMainMenuITEMlibrary_search"
+			   		target="_self">
+			 		  回到首页</a></span>
+			</li>
+		<li id="exlidMainMenuItem2" class="EXLMainMenuItem">
+			<span><a title="标签"
+			   		href="/primo_library/libweb/action/tagsAction.do?menuitem=1&amp;fn=showTagsPage&amp;fromTop=true&amp;fromPreferences=false&amp;fromEshelf=false&amp;vid=chinese"
+			   		class="EXLMainMenuITEMtags"
+			   		target="_self">
+			 		  浏览标签</a></span>
+			</li>
+		<li id="exlidMainMenuItem3" class="EXLMainMenuItem">
+			<span><a title="期刊导航"
+				   href="http://ersa.lib.sjtu.edu.cn"
+				   class="EXLMainMenuITEM期刊导航"
+				   target="_blank">
+				   期刊导航</a></span>
+			</li>
+		<li id="exlidMainMenuItem4" class="EXLMainMenuItem EXLLastItem">
+		<span><a title="帮助"
+		   href="helpHandler.do?helpId=search"
+		   class="EXLMainMenuITEMHelp"
+		   target="popup"
+		   onclick="openWindow(this.href, this.target, 'top=100,left=50,width=600,height=500,resizable=1,scrollbars=1'); return false;">
+		   帮助</a></span>
+	</li>
+  </ul>
+</div>
+<input type="hidden" class="gatherpagestat" value="true" />
+
+<!-- For Alma Services Page -->
+<input type="hidden" class="EXLTabBoomId" id="FindDbStat" 
+		value="A=Primo_Local&amp;I=SJT&amp;S=68559BAB8F7B9A06C7BC6EB08A742CB7&amp;IP=202.121.183.49&amp;SRVR=primofe.lib.sjtu.edu.cn&amp;P=find-database&amp;OP=databaseClick&amp;M=&amp;TYP=Page_View_4.1.1.131211&amp;G=&amp;O=%26%26%26%26SJT%26上海交通大学图书馆%26%26&amp;O1=&amp;O2=sjtulibxw&amp;O3=&amp;O4=&amp;O5=PRD.86SJT.SJT&amp;O6=&amp;O7=0&amp;O8=&amp;O9=&amp;" />
+<input type="hidden" class="boombaseurl" value="http://beacon01.alma.exlibrisgroup.com/boom/apache_pb.gif" />
+
+<input type="hidden" class="gatherpagestat" value="true" />
+
+<!-- For Alma Services Page -->
+<input type="hidden" class="EXLTabBoomId" id="CitationLinkerStat" 
+		value="A=Primo_Local&amp;I=SJT&amp;S=68559BAB8F7B9A06C7BC6EB08A742CB7&amp;IP=202.121.183.49&amp;SRVR=primofe.lib.sjtu.edu.cn&amp;P=citation-linker&amp;OP=citationLinkerClick&amp;M=&amp;TYP=Page_View_4.1.1.131211&amp;G=&amp;O=%26%26%26%26SJT%26上海交通大学图书馆%26%26&amp;O1=&amp;O2=sjtulibxw&amp;O3=&amp;O4=&amp;O5=PRD.86SJT.SJT&amp;O6=&amp;O7=0&amp;O8=&amp;O9=&amp;" />
+<input type="hidden" class="boombaseurl" value="http://beacon01.alma.exlibrisgroup.com/boom/apache_pb.gif" />
+
+<!--Languages menu-->
+ <div class="EXLLanguagesContainer">
+ <span class="EXLLanguagesLabel">语言:</span>
+  <div class="EXLLanguagesMenu">
+	<ul id="exlidLanguages" class="EXLLanguageMenuShow EXLLanguageMenuHide "><!--remove EXLLanguageMenuHide to show menu items-->
+		<li class="EXLLanguageLink EXLLanguageLinkHide"><a href="preferences.do?fn=change_lang&amp;vid=chinese&amp;prefLang=en_US&amp;prefBackUrl=http:%2F%2Fourex.lib.sjtu.edu.cn:80%2Fprimo_library%2Flibweb%2Faction%2Fdisplay.do?dscnt=0%26elementId=0%26recIdxs=0%26frbrVersion=3%26scp.scps=scope%3A%28SJT%29%2Cscope%3A%28sjtu_metadata%29%2Cscope%3A%28sjtu_sfx%29%2Cscope%3A%28sjtulibzw%29%2Cscope%3A%28sjtulibxw%29%2CDuxiuBook%26displayMode=full%26tab=default_tab%26dstmp=1455332763115%26ct=display%26gathStatTab=true%26indx=1%26recIds=sjtulibxw000311379%26renderMode=poppedOut%26doc=sjtulibxw000311379%26vl(freeText0)=git%26vid=chinese%26fn=search%26tabs=locationsTab%26vid=chinese" class="EXLLanguageOptionLANGen_US" title="选择界面语言">English</a></li>
+				<li id="exlidSelectedLanguage" class="EXLLanguageLink"><a href="#">中文<img src="../images/icon_arrow_sendTo.png" alt="Show More Options"/></a></li>
+				</ul>
+  </div>
+</div>
+<div id="flagForFindDbDeepLink" title="NotADeepLink"></div>
+<div id="savedSelectedMyAccountTab"></div>
+<div id="exlidLightbox">
+<script type="text/javascript">
+var str = window.location.href;
+var n = str.match(/openFdb=true/g);
+if (n != null){
+boomCallToRum('FindDbStat',false);
+var openMyDatabases = str.match(/openMyDatabases=true/g);
+ if(openMyDatabases != null){
+   openPrimoLightBox('searchDB','loadSearchDbPage','searchDbXml','IamDeepLinkToMyDatabases'); 
+ }else{
+   openPrimoLightBox('searchDB','loadSearchDbPage','searchDbXml','IamDeepLink');
+ }
+}
+</script>
+<noscript>This feature required javascript</noscript>
+</div>
+</div>
+    <div id="exlidSearchTileWrapper" class="EXLSearchWrapper">
+        <!-- l_search_input.jsp begin -->
+<!-- taglibsIncludeAll.jspf begin -->
+<!-- taglibsIncludeAll.jspf end --><!-- jsp_mapping_retriever.jsp begin -->
+<!-- jsp_mapping_retriever.jsp end -->
+<!-- resolved jsp page for search tile: ../../tiles/searchTile.jsp -->
+<!-- taglibsIncludeAll.jspf begin -->
+<!-- taglibsIncludeAll.jspf end --><script type="text/javascript">
+//<![CDATA[
+function loadSearchDbPage(){
+	var fn;
+	addLightBoxDivs();
+	fn='loadSearchDbPage';
+	var timestamp = new Date().getTime();
+	var url = "searchDB.do"+"?fn="+fn+"&ts="+timestamp;
+	var data;
+	$.ajax({
+	    url:url,
+		data:data,
+		global:false,
+		beforeSend: function(request){
+			setAjaxRequestHeader(request);
+		},
+		error: function(request,errorType,exceptionOcurred){
+			if (errorType=='timeout'){
+				notifyAjaxTimeout();
+			}else{
+				generalAjaxError();
+			}
+			document.getElementById('exliLoadingFdb').style.display='none';
+			document.getElementById('exliGreyOverlay').style.display='none';
+			document.getElementById('exliWhiteContent').style.display='none';
+			return false;
+		},
+		success: function(data){
+			if (isAjaxXmlRedirect(data)){
+				handleAjaxXmlRedirect(data);
+			}
+			var elm = $(data).find('searchDbXml');
+			var cdata = $(elm).text();
+			$('span[id=exliLoadingFdbSpan]').remove();
+			var n;
+			n = document.getElementById("exliWhiteContent");
+			var xmlText = cdata.replace(/\n\n/g, "\n").replace(/&lt;/g,"<").replace(/&gt;/g,">");
+			var newdiv = document.createElement("div");
+			newdiv.innerHTML = xmlText;
+			n.innerHTML='';
+			$(n).append(newdiv);
+		}
+	});
+}
+
+
+
+
+
+
+// ]]>
+</script>
+<noscript>This feature requires javascript</noscript><!-- searchTile.jsp begin -->
+<form name="searchForm" method="get" action="/primo_library/libweb/action/search.do?fn=search&amp;ct=search" class="EXLSearchForm" enctype="application/x-www-form-urlencoded; charset=utf-8" onsubmit="if(isRemoteSearch()){doPleaseWait();};if(window.manualFormSubmit){manualFormSubmit(this.id);return false;}" id="searchForm" target="_self"><input id="fn" type="hidden" value="search" name="fn" />
+<input id="ct" type="hidden" value="search" name="ct" />
+<input id="initialSearch" type="hidden" value="true" name="initialSearch" />
+
+<input id="autoCompleteEnabled"   type="hidden" value='false' />
+<input id="autoCompleteUrl"       type="hidden" value='null/solr/ac' />
+<input id="autoCompleteScope"     type="hidden" value='' />
+<input id="autoCompleteScopesMap" type="hidden" value='{"default_scope":"L","paper_foreign":"C","zhizhen_book":"C","zhizhen_thesis":"C","thesis_foreign":"C","zhizhen_paper_chinese":"C","thesis_all":"C","media_all":"B","all":"B","paper_all":"C"}' />
+<input id="autoCompleteEnabledMap" type="hidden" value='{"default_scope":false,"paper_foreign":false,"duxiu_scope":false,"zhizhen_thesis":false,"remote_en_scope":false,"zhizhen_paper_chinese":false,"paper_chinese":false,"remote_journal_proceeding_scope":false,"paper_all":false,"thesis_chinese":false,"sjtu_xw":false,"remote_cn_scope":false,"zhizhen_book":false,"book_chinese":false,"sjtu_zw":false,"zhizhen_media":false,"thesis_foreign":false,"thesis_all":false,"media_all":false,"book_journal":false,"standard_innovation_all":false,"all":false}' />
+<input id="instCode" type="hidden" value='SJT' />
+<input id="pcToken" type="hidden" value='0' />
+<!-- taglibsIncludeAll.jspf begin -->
+<!-- taglibsIncludeAll.jspf end --><!-- searchTileBasic.jsp begin -->
+<div id="exlidSearchTile" class="EXLSearch">
+<div id="exlidSearchRibbon">
+<!-- search_hidden.jspf begin -->
+<!-- taglibsIncludeAll.jspf begin -->
+<!-- taglibsIncludeAll.jspf end --><!--
+		institution = 上海交通大学图书馆
+		institution code = SJT
+	 -->
+	<script>
+var usrname = "anonymous";
+var usrins = "SJT";
+//var usrgrp = "";
+var usrgrp = "GUEST";
+var allAccess = "true";
+var usremail = "";
+var usrid = "";
+</script>
+
+	<input type="hidden" id="mode" name="mode" value="Basic"/>
+	<input type="hidden" id="tab" name="tab" value="default_tab"/>
+	<input type="hidden" id="indx" name="indx" value="1"/>
+	<input type="hidden" id="dum" name="dum" value="true"/>
+	<input type="hidden" name="srt" value="rank" id="str"/>
+
+	<input type="hidden" id="vid" name="vid" value="chinese"/>
+	<input type="hidden" id="frbg" name="frbg" value=""/>
+	<!-- search_hidden.jspf end -->
+<fieldset>
+    <legend class="EXLHiddenCue">Primo Search</legend>
+
+<div class="EXLSearchTabsContainer">
+
+
+<input type="hidden" name="tb" value="t" id="tb" /><ul id="exlidSearchTabs" class="EXLTabs">
+		<li id="exlidTab0" class="EXLSearchTab EXLSearchTabSelected">
+				<span id="defaultScopedefault_tab" style='display:none'>馆藏书刊</span> <a href="search.do?mode=Basic&amp;vid=chinese&amp;vl(freeText0)=git&amp;fn=search&amp;tab=default_tab&amp;" class="EXLSearchTabTitle EXLSearchTabLABEL书/刊" target="_self" onclick="getSearchField(this,'Basic'); delay4Remote('local','true ','default_tab')"
+				   title="查找书刊目录">
+					<span>书/刊</span>
+				</a>
+			</li>
+		<li id="exlidTab1" class="EXLSearchTab ">
+				<span id="defaultScopepaper_tab" style='display:none'>所有文章</span> <a href="search.do?mode=Basic&amp;vid=chinese&amp;vl(freeText0)=git&amp;fn=search&amp;tab=paper_tab&amp;" class="EXLSearchTabTitle EXLSearchTabLABEL文 章" target="_self" onclick="getSearchField(this,'Basic'); delay4Remote('local','true ','paper_tab')"
+				   title="查找中外文章资源">
+					<span>文 章</span>
+				</a>
+			</li>
+		<li id="exlidTab2" class="EXLSearchTab ">
+				<span id="defaultScopethesis_tab" style='display:none'>所有学位论文</span> <a href="search.do?mode=Basic&amp;vid=chinese&amp;vl(freeText0)=git&amp;fn=search&amp;tab=thesis_tab&amp;" class="EXLSearchTabTitle EXLSearchTabLABEL学位论文" target="_self" onclick="getSearchField(this,'Basic'); delay4Remote('local','true ','thesis_tab')"
+				   title="查找中外文学位论文">
+					<span>学位论文</span>
+				</a>
+			</li>
+		<li id="exlidTab3" class="EXLSearchTab ">
+				<span id="defaultScopemedia_tab" style='display:none'>多媒体</span> <a href="search.do?mode=Basic&amp;vid=chinese&amp;vl(freeText0)=git&amp;fn=search&amp;tab=media_tab&amp;" class="EXLSearchTabTitle EXLSearchTabLABEL多媒体" target="_self" onclick="getSearchField(this,'Basic'); delay4Remote('local','true ','media_tab')"
+				   title="查找多媒体资源">
+					<span>多媒体</span>
+				</a>
+			</li>
+		<li id="exlidTab4" class="EXLSearchTab ">
+				<span id="defaultScopeall_tab" style='display:none'>整合检索</span> <a href="search.do?mode=Basic&amp;vid=chinese&amp;vl(freeText0)=git&amp;fn=search&amp;tab=all_tab&amp;" class="EXLSearchTabTitle EXLSearchTabLABEL整合资源" target="_self" onclick="getSearchField(this,'Basic'); delay4Remote('local','true ','all_tab')"
+				   title="同时检索馆藏目录和电子数据库中的文章">
+					<span>整合资源</span>
+				</a>
+			</li>
+		</ul>
+
+</div>
+<div class="EXLSearchFieldRibbon ">
+      <div class="EXLSearchFieldRibbonFormFields">
+        <div class="EXLSearchFieldRibbonFormSearchFor">
+          <label for="search_field" class="EXLHide">Search For:</label>
+          <input name="vl(freeText0)" class=""
+			value='git' id="search_field" type="text" accesskey="s" />
+        </div>
+
+
+<!-- taglibsIncludeAll.jspf begin -->
+<!-- taglibsIncludeAll.jspf end --><div id="scopesList">
+<div class="EXLSearchFieldRibbonFormSelectedCollection ">
+	 <span class="EXLHiddenCue">Search in:</span>
+		<span class="EXLSearchFieldRibbonFormSelectedCollectionLabel">
+		  <a href="#" title="show more options">
+	       	  馆藏书刊</a>
+		</span>
+	</div>
+
+<div class="EXLSearchFieldRibbonFormCollectionsList" style="display:none" ><span class="EXLHiddenCue">Or select another collection:</span>
+     <div id="scopesListContainer" class="EXLDynamicSelectBodyRadio">
+     <div class="EXLDynamicSelectBodyRadioFirst"   id="default_scope-Div" >
+			<a href="#" class="EXLDynamicSelectBodyRadioFirst">
+			  <span class="EXLHiddenCue">Search in:</span>
+			  <span class="EXLSearchFieldStrippedText">
+	              <input name="scp.scps" type="radio" 'checked="checked"'   id="exlidDynamicSelectBodyRadio0" value="scope:(SJT),scope:(sjtu_metadata),scope:(sjtu_sfx),scope:(sjtulibzw),scope:(sjtulibxw)"/>
+	              <label for="exlidDynamicSelectBodyRadio0">
+	                   馆藏书刊</label>
+			</span>
+			  </a>
+            </div>
+		<div class=""   id="zhizhen_book-Div" >
+			<a href="#" class="">
+			  <span class="EXLHiddenCue">Search in:</span>
+			  <span class="EXLSearchFieldStrippedText">
+	              <input name="scp.scps" type="radio"   id="exlidDynamicSelectBodyRadio1" value="ZhiZhenBook"/>
+	              <label for="exlidDynamicSelectBodyRadio1">
+	                   电子图书</label>
+			</span>
+			  </a>
+            </div>
+		</div>
+
+</div>
+  </div>
+  </div>
+<!-- end  search field ribbon -->
+      <div class="EXLSearchFieldRibbonFormSubmitSearch">
+		<input id="goButton" type="submit" value="检索" class="submit" accesskey="g"/>
+      </div>
+
+    </div>
+    </fieldset>
+<div class="EXLSearchFieldRibbonAdvancedSearchLink">
+	<a class="EXLSearchFieldRibbonAdvancedTwoLinks" title="转到高级检索" href="search.do?mode=Advanced&amp;ct=AdvancedSearch&amp;" id="advancedSearchBtn">高级检索</a>
+</div>
+
+<div class="EXLSearchFieldRibbonBrowseSearchLink">
+	<a class="EXLSearchFieldRibbonAdvancedTwoLinks" title="浏览查询" href="search.do?fn=showBrowse&amp;mode=BrowseSearch&amp;">浏览查询</a>
+</div>
+</div>
+<div id="exlidSearchBanner">
+<a
+	           href="search.do"
+	           target="_popup">
+	          <img src="../images/banner.png" alt="rss" />
+	        </a>
+</div>
+<!--end exlidSearchBanner-->
+</div>
+<!-- searchTileBasic.jsp end --><!-- taglibsIncludeAll.jspf begin -->
+<!-- taglibsIncludeAll.jspf end --><script type="text/javascript"> // <![CDATA[
+
+function removeChildren(elm){
+	if ( elm.hasChildNodes() )
+	{
+    		while ( elm.childNodes.length >= 1 )
+    		{
+        			elm.removeChild( elm.firstChild );
+    		}
+	}
+}
+
+
+function loopSelected(selObj, newObj, selectedElm)
+{
+
+	for (i=0; i<selObj.options.length; i++) {
+		var op = document.createElement('option');
+		op.text = selObj.options[i].text;
+		op.value = selObj.options[i].value;
+		op.id = selObj.options[i].id;
+		if (selectedElm == selObj.options[i].value ){
+			op.selected = 'selected';
+		}
+		try {
+  			newObj.add(op, newObj.options[i]); // firefox
+		} catch (ex) {
+  			newObj.add(op, i); // ie
+		}
+	}
+}
+
+
+function showSelected(selectedOption, id  ) {
+
+		var selOperatorObj = document.getElementById('exlidInput_precisionOperator_' +id);
+		var selOperatorIndex = selOperatorObj.selectedIndex;
+		var titleObj=document.getElementById('exlidInput_scope_title' +id);
+
+		var allObj =document.getElementById('exlidInput_scope_all' +id);
+		var orgObj = document.getElementById('exlidInput_scope_' +id);
+		var selectedElm =orgObj.options[orgObj.selectedIndex];
+
+		if ( selOperatorObj.options[selOperatorIndex].value =='begins_with'){
+			if (titleObj == null || titleObj == undefined ){
+				selectedOption.options[0].selected = 'selected';
+				alert('前方一致只可用于题名检索');
+				return false;
+			}
+			removeChildren(orgObj);
+			loopSelected(titleObj, orgObj, selectedElm.value);
+			var searchForm = document.getElementsByName('searchForm')[0];
+			var hiddenSrt = document.getElementById("str");
+			hiddenSrt.value = 'title';
+		} else{
+			removeChildren(orgObj);
+			loopSelected(allObj, orgObj, selectedElm.value);
+			var searchForm = document.getElementsByName('searchForm')[0];
+			var hiddenSrt = document.getElementById("str");
+			hiddenSrt.value = 'rank';
+		}
+
+}
+
+function unselect(id  ) {
+
+	 	 if (document.getElementById('begins_with'+id)) {
+			var orgObj = document.getElementById('exlidInput_scope_' +id);
+			removeChildren(orgObj);
+			var op = document.createElement('option');
+			op.text = '题名';
+			op.value = 'title';
+			op.id = 'scope_titleOnly'+id;
+			op.selected = 'selected';
+			try {
+  				orgObj.add(op, orgObj.options[0]); // firefox
+			} catch (ex) {
+  				orgObj.add(op, 0); // ie
+			}
+			var searchForm = document.getElementsByName('searchForm')[0];
+			var hiddenSrt = document.getElementById("str");
+			hiddenSrt.value = 'title';
+		}
+}
+
+function unselectAdvanceTitle(id){
+
+	if (document.getElementById('title'+id)) {
+		var orgObj = document.getElementById('exlidInput_scope_' +id);
+		removeChildren(orgObj);
+		var op = document.createElement('option');
+		op.text = '题名';
+		op.value = 'title';
+		op.id = 'scope_titleOnly'+id;
+		op.selected = 'selected';
+		try {
+			orgObj.add(op, orgObj.options[0]); // firefox
+		} catch (ex) {
+			orgObj.add(op, 0); // ie
+		}
+		var searchForm = document.getElementsByName('searchForm')[0];
+		var hiddenSrt = document.getElementById("str");
+		hiddenSrt.value = 'title';
+	}
+}
+
+
+//]]>
+</script>
+<noscript>This feature requires javascript</noscript><!-- searchLimitsTile.jsp begin -->
+<div id="exlidHeaderSearchLimits">
+      <fieldset>
+      <legend class="EXLHiddenCue"><!-- userText.tag begin -->
+<!-- userText.tag end --></legend>      
+      <span class="EXLHeaderSearchLimitsFields">
+		<span class="EXLHeaderSearchLimitsFieldsTitle">
+		<!-- userText.tag begin -->
+<!-- userText.tag end --></span>
+
+		   <span class="EXLHiddenCue"><!-- userText.tag begin -->
+检索限定：<!-- userText.tag end --></span>
+				<!-- select.tag begin -->
+<!-- taglibsIncludeAll.jspf begin -->
+<!-- taglibsIncludeAll.jspf end --><label class="EXLHide" for="exlidInput_mediaType_1">criteria input</label>
+		 <select class="EXLSelectTag blue EXLSimpleSearchSelect" id="exlidInput_mediaType_1" 
+		  name="vl(50541600UI1)" >
+
+
+			<option  style="display:block"  value="books"  id="mediaType_books1"
+						class="EXLSelectOption">
+							图书</option>
+				<option  style="display:block"  value="journals"  id="mediaType_journals1"
+						class="EXLSelectOption">
+							期刊/报纸</option>
+				<option  style="display:block"  value="thesis"  id="mediaType_thesis1"
+						class="EXLSelectOption">
+							学位论文</option>
+				<option  style="display:block"  value="all_items"  id="mediaType_all_items1"
+						selected="selected"class="EXLSelectedOption">
+							所有类型</option>
+				</select>
+		 <!-- select.tag end --><span class="EXLHide">
+				<span class="EXLHide">显示记录：</span>
+				</span>
+				<!-- select.tag begin -->
+<!-- taglibsIncludeAll.jspf begin -->
+<!-- taglibsIncludeAll.jspf end --><label class="EXLHide" for="exlidInput_precisionOperator_1">criteria input</label>
+		 <select class="EXLSelectTag blue EXLSimpleSearchSelect" id="exlidInput_precisionOperator_1" 
+				onchange="showSelected(this, '1' ); return false;"
+			
+		  name="vl(1UIStartWith0)" >
+
+
+			<option value="contains"
+					selected="selected"class="EXLSelectedOption">
+						模糊匹配</option>
+				<option value="exact"
+					class="EXLSelectOption">
+						精确匹配</option>
+				<option value="begins_with"
+					class="EXLSelectOption">
+						开头为</option>
+				</select>
+		 <!-- select.tag end --><span class="EXLHide">
+				<span class="EXLHide">显示记录：</span>
+				<!-- userText.tag begin -->
+<!-- userText.tag end --></span>
+				<!-- select.tag begin -->
+<!-- taglibsIncludeAll.jspf begin -->
+<!-- taglibsIncludeAll.jspf end --><label class="EXLHide" for="exlidInput_scope_1">criteria input</label>
+		<select class="EXLSelectTag blue EXLSimpleSearchSelect" id="exlidInput_scope_1" name="vl(10225382UI0)"   >
+			<option value="any"  id="scope_any1"
+						selected="selected"class="EXLSelectedOption">
+							记录中的任何地方</option>
+				<option value="title"  id="scope_title1"
+						class="EXLSelectOption">
+							题名</option>
+				<option value="creator"  id="scope_creator1"
+						class="EXLSelectOption">
+							作者/编者</option>
+				<option value="sub"  id="scope_sub1"
+						class="EXLSelectOption">
+							主题</option>
+				<option value="lsr03"  id="scope_lsr031"
+						class="EXLSelectOption">
+							出版者</option>
+				<option value="cdate"  id="scope_cdate1"
+						class="EXLSelectOption">
+							出版时间</option>
+				<option value="usertag"  id="scope_usertag1"
+						class="EXLSelectOption">
+							标签</option>
+				<option value="lsr01"  id="scope_lsr011"
+						class="EXLSelectOption">
+							索书号</option>
+				<option value="addsrcrid"  id="scope_addsrcrid1"
+						class="EXLSelectOption">
+							源系统记录号</option>
+				<option value="isbn"  id="scope_isbn1"
+						class="EXLSelectOption">
+							国际标准书号(ISBN)</option>
+				<option value="issn"  id="scope_issn1"
+						class="EXLSelectOption">
+							国际标准刊号(ISSN)</option>
+				</select>
+
+
+			<label class="EXLHide" for="exlidInput_scope_title1">Show Results with:</label>
+				  	<select class="EXLSelectTag blue EXLSimpleSearchSelect" id="exlidInput_scope_title1" name="vl(10225382UI0)"  style="display:none" >
+					<option  value="title"  id="scope_titleOnly1" selected="selected"
+
+						class="EXLSelectOption">
+						题名</option>
+					</select>
+				<label class="EXLHide" for="exlidInput_scope_all1">Show Results with:</label>
+		<select class="EXLSelectTag blue EXLSimpleSearchSelect" id="exlidInput_scope_all1" name="vl(10225382UI0)" style="display:none">
+			<option  style="display:block"  value="any"  id="scope_anyall1"
+						selected="selected"class="EXLSelectedOption">
+							记录中的任何地方</option>
+				<option  style="display:block"  value="title"  id="scope_titleall1"
+						class="EXLSelectOption">
+							题名</option>
+				<option  style="display:block"  value="creator"  id="scope_creatorall1"
+						class="EXLSelectOption">
+							作者/编者</option>
+				<option  style="display:block"  value="sub"  id="scope_suball1"
+						class="EXLSelectOption">
+							主题</option>
+				<option  style="display:block"  value="lsr03"  id="scope_lsr03all1"
+						class="EXLSelectOption">
+							出版者</option>
+				<option  style="display:block"  value="cdate"  id="scope_cdateall1"
+						class="EXLSelectOption">
+							出版时间</option>
+				<option  style="display:block"  value="usertag"  id="scope_usertagall1"
+						class="EXLSelectOption">
+							标签</option>
+				<option  style="display:block"  value="lsr01"  id="scope_lsr01all1"
+						class="EXLSelectOption">
+							索书号</option>
+				<option  style="display:block"  value="addsrcrid"  id="scope_addsrcridall1"
+						class="EXLSelectOption">
+							源系统记录号</option>
+				<option  style="display:block"  value="isbn"  id="scope_isbnall1"
+						class="EXLSelectOption">
+							国际标准书号(ISBN)</option>
+				<option  style="display:block"  value="issn"  id="scope_issnall1"
+						class="EXLSelectOption">
+							国际标准刊号(ISSN)</option>
+				</select>
+		<!-- select.tag end --><!-- userText.tag begin -->
+<!-- userText.tag end --><!-- &nbsp;&nbsp; <font color="#993300">&#x6E29;&#x99A8;&#x63D0;&#x793A;&#xFF1A;&#x674E;&#x653F;&#x9053;&#x56FE;&#x4E66;&#x9986;&#x56FE;&#x4E66;&#x9700;&#x9884;&#x7EA6;&#x624D;&#x80FD;&#x501F;&#x9605;&#xFF01;</font>-->
+      <input name="Submit" type="submit" value="Apply Search Limits"/>
+
+      <input name="Reset" type="reset" value="Clear Limits"/>
+      </span>
+      </fieldset>
+</div>
+<!-- searchLimitsTile.jsp end -->
+</form><!-- searchTile.jsp end -->
+<!-- l_search_input.jsp end --></div>
+    <div id="exlidHeaderSystemFeedbackContainer" class="EXLSystemFeedbackContainer">
+        <!-- systemFeedbackTile.jsp begin -->
+<!-- taglibsIncludeAll.jspf begin -->
+<!-- taglibsIncludeAll.jspf end --><!-- systemFeedbackTile.jsp end --></div>
+</div>
+<div id="exlidResultsContainer" class="EXLResultsContainer">
+    <div id="resultsTileNoId" class="EXLResultsTile">
+        <div id="resultsListNoId" class="EXLResultsList">
+            <!-- taglibsIncludeAll.jspf begin -->
+<!-- taglibsIncludeAll.jspf end --><!-- If we have result in the request the page was called for printable display -->
+<script type="text/javascript" src="../javascript/primo_boomerang.js"></script>
+<noscript>This feature requires javascript</noscript>
+
+<!-- If index is defined this jsp was called from printable_body_layout.jsp and the index
+         is passed in the request, otherwise we need to set it to zero explicitly -->
+<div class="EXLSummary EXLResult">
+        <div class="EXLSummaryContainer"><a name="sjtulibxw000311379" id="sjtulibxw000311379" class="EXLResultRecordId"></a>
+                <div class="EXLSummaryFields">
+                        <h1 class="EXLResultTitle">Version control with <span class="searchword">Git</span> = <span class="searchword">Git</span>&#29256;&#26412;&#25511;&#21046;</h1>
+                        <h2 class="EXLResultAuthor">Jon Loeliger</h2>
+                        <!-- 8300 defect for UNSW -->
+                        <span class="EXLResultDetails"></span>
+                        <h3 class="EXLResultFourthLine">&#21335;&#20140; : &#19996;&#21335;&#22823;&#23398;&#20986;&#29256;&#31038; 2nd ed.. 2013</h3>
+                        <!-- end of 8300 -->
+                        <!--   span class="EXLResultDetails"></span>-->
+                <!-- available.tag begin -->
+<input type="hidden" id="rtaElapseTime_0" />
+
+<script type="text/javascript">
+  document.getElementById("rtaElapseTime_0").value = 'XXX' + new Date().getTime();
+</script>
+ 
+<p class="EXLResultAvailability">
+<em class="EXLResultStatusNotAvailable" id="RTADivTitle_0">
+已外借<span id="RTASpan_0">(获取)</span>
+					</em>
+</p>
+
+
+<script type="text/javascript">
+		document.getElementById('RTASpan_0').innerHTML = '<span class="EXLAvailabilityRTAupdating">(正在更新。。。)<\/span>';
+</script>
+<noscript>This feature requires javascript</noscript>
+<!-- available.tag end --></div>
+
+                <cite class="EXLResultFRBR">
+                                <span class="EXLResultBgFRBR"></span>
+                                        <a class="EXLBriefResultsDisplayMultipleLink" target="_parent" href="search.do?frbg=50806657&amp;fctN=facet_frbrgroupid&amp;fctV=50806657&amp;doc=sjtulibxw000311379&amp;dscnt=0&amp;elementId=0&amp;recIdxs=0&amp;frbrVersion=3&amp;scp.scps=scope%3A(SJT)%2Cscope%3A(sjtu_metadata)%2Cscope%3A(sjtu_sfx)%2Cscope%3A(sjtulibzw)%2Cscope%3A(sjtulibxw)%2CDuxiuBook&amp;displayMode=full&amp;tab=default_tab&amp;dstmp=1455332762859&amp;ct=search&amp;gathStatTab=true&amp;indx=1&amp;recIds=sjtulibxw000311379&amp;renderMode=poppedOut&amp;doc=sjtulibxw000311379&amp;vl(freeText0)=git&amp;vid=chinese&amp;fn=search&amp;tabs=locationsTab">
+                                                有&nbsp;3&nbsp;版本或分册</a>
+                                <span class="EXLResultBgRtlFRBR"></span>
+                        </cite>
+                </div>
+
+                        <div class="EXLTabsRibbon ">
+      <div><!-- result.id: sjtulibxw000311379 tabState: com.exlibris.primo.tabs.TabStateBean@67093047 tabOrder: [viewonline, getit_link1, locations, details, reviewsandtags, recommendations, getit_link2, citations, onlinereviews, browseshelf] -->
+        <ul id="exlidResult0-TabsList" class="EXLResultTabs">
+                <!-- index: 0 length: 10 -->
+                        <!-- index: 1 length: 10 -->
+                        <li id="exlidResult0-RequestTab" class="EXLRequestTab EXLResultTab EXLResultFirstTab ">
+                                <a href="display.do?ct=display&amp;fn=search&amp;doc=sjtulibxw000311379&amp;indx=1&amp;recIds=sjtulibxw000311379&amp;recIdxs=0&amp;elementId=0&amp;renderMode=poppedOut&amp;displayMode=full&amp;dscnt=0&amp;frbrVersion=3&amp;scp.scps=scope%3A%28SJT%29%2Cscope%3A%28sjtu_metadata%29%2Cscope%3A%28sjtu_sfx%29%2Cscope%3A%28sjtulibzw%29%2Cscope%3A%28sjtulibxw%29%2CDuxiuBook&amp;tab=default_tab&amp;dstmp=1455332763123&amp;gathStatTab=true&amp;vl(freeText0)=git&amp;vid=chinese&amp;tabs=requestTab&amp;gathStatTab=true" title="" >预约请求</a>
+
+                                <!-- rum statistics -->
+
+                                <input type="hidden" class="gatherpagestat" value="true" />
+
+<!-- For Alma Services Page -->
+<input type="hidden" class="EXLTabBoomId" id="getit1_0" 
+		value="A=Primo_Local&amp;I=SJT&amp;S=68559BAB8F7B9A06C7BC6EB08A742CB7&amp;IP=202.121.183.49&amp;SRVR=primofe.lib.sjtu.edu.cn&amp;P=brief&amp;OP=getit1&amp;M=&amp;TYP=Page_View_4.1.1.131211&amp;G=&amp;O=%261%26%26book%26SJT%26上海交通大学图书馆%26http://sfx.lib.sjtu.edu.cn:3210/sfxlcl3?url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-sjtulibxw&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:book&amp;rft.genre=book&amp;rft.atitle=&amp;rft.jtitle=&amp;rft.btitle=Version%20control%20with%20Git%20=%20Git版本控制&amp;rft.aulast=Loeliger&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Loeliger%2C%20Jon&amp;rft.aucorp=&amp;rft.volume=&amp;rft.issue=&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=&amp;rft.epage=&amp;rft.pages=&amp;rft.artnum=&amp;rft.issn=&amp;rft.eissn=&amp;rft.isbn=9787564141967&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/&amp;rft.object_id=&amp;rft.eisbn=&amp;rft_dat=&lt;sjtulibxw&gt;000311379&lt;/sjtulibxw&gt;&lt;grp_id&gt;50806657&lt;/grp_id&gt;&lt;oa&gt;&lt;/oa&gt;&amp;rft_id=info:oai/&gt;&amp;req.language=chi%26&amp;O1=Primo Local&amp;O2=sjtulibxw&amp;O3=sjtulibxw000311379&amp;O4=delivery,tab1_unavail,http://opac.lib.sjtu.edu.cn/F?func=item-global&amp;doc_library=SJT09&amp;local_base=SJT09&amp;doc_number=000311379&amp;O5=PRD.86SJT.SJT&amp;O6=50806657&amp;O7=0&amp;O8=&amp;O9=&amp;"/>
+<input type="hidden" class="boombaseurl" value="http://beacon01.alma.exlibrisgroup.com/boom/apache_pb.gif" />
+
+<!-- end rum statistics -->
+                          </li>
+                          <!-- index: 2 length: 10 -->
+                        <li id="exlidResult0-LocationsTab" class="EXLLocationsTab EXLResultTab EXLResultSelectedTab "><a href="display.do?ct=display&amp;fn=search&amp;doc=sjtulibxw000311379&amp;indx=1&amp;recIds=sjtulibxw000311379&amp;recIdxs=0&amp;elementId=0&amp;renderMode=poppedOut&amp;displayMode=full&amp;dscnt=0&amp;frbrVersion=3&amp;scp.scps=scope%3A%28SJT%29%2Cscope%3A%28sjtu_metadata%29%2Cscope%3A%28sjtu_sfx%29%2Cscope%3A%28sjtulibzw%29%2Cscope%3A%28sjtulibxw%29%2CDuxiuBook&amp;tab=default_tab&amp;dstmp=1455332763123&amp;gathStatTab=true&amp;vl(freeText0)=git&amp;vid=chinese&amp;tabs=locationsTab&amp;gathStatTab=true" title="">馆藏信息</a>
+                                <!-- rum statistics -->
+
+                                <input type="hidden" class="gatherpagestat" value="true" />
+
+<!-- For Alma Services Page -->
+<input type="hidden" class="EXLTabBoomId" id="locations_0" 
+		value="A=Primo_Local&amp;I=SJT&amp;S=68559BAB8F7B9A06C7BC6EB08A742CB7&amp;IP=202.121.183.49&amp;SRVR=primofe.lib.sjtu.edu.cn&amp;P=brief&amp;OP=locationTab&amp;M=&amp;TYP=Page_View_4.1.1.131211&amp;G=&amp;O=%261%26%26book%26SJT%26上海交通大学图书馆%26http://sfx.lib.sjtu.edu.cn:3210/sfxlcl3?url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-sjtulibxw&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:book&amp;rft.genre=book&amp;rft.atitle=&amp;rft.jtitle=&amp;rft.btitle=Version%20control%20with%20Git%20=%20Git版本控制&amp;rft.aulast=Loeliger&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Loeliger%2C%20Jon&amp;rft.aucorp=&amp;rft.volume=&amp;rft.issue=&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=&amp;rft.epage=&amp;rft.pages=&amp;rft.artnum=&amp;rft.issn=&amp;rft.eissn=&amp;rft.isbn=9787564141967&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/&amp;rft.object_id=&amp;rft.eisbn=&amp;rft_dat=&lt;sjtulibxw&gt;000311379&lt;/sjtulibxw&gt;&lt;grp_id&gt;50806657&lt;/grp_id&gt;&lt;oa&gt;&lt;/oa&gt;&amp;rft_id=info:oai/&gt;&amp;req.language=chi%26&amp;O1=Primo Local&amp;O2=sjtulibxw&amp;O3=sjtulibxw000311379&amp;O4=locations&amp;O5=PRD.86SJT.SJT&amp;O6=50806657&amp;O7=0&amp;O8=&amp;O9=&amp;"/>
+<input type="hidden" class="boombaseurl" value="http://beacon01.alma.exlibrisgroup.com/boom/apache_pb.gif" />
+
+<!-- end rum statistics -->
+                          </li>
+                          <!-- index: 3 length: 10 -->
+                        <li id="exlidResult0-DetailsTab" class="EXLDetailsTab EXLResultTab "><a href="display.do?ct=display&amp;fn=search&amp;doc=sjtulibxw000311379&amp;indx=1&amp;recIds=sjtulibxw000311379&amp;recIdxs=0&amp;elementId=0&amp;renderMode=poppedOut&amp;displayMode=full&amp;dscnt=0&amp;frbrVersion=3&amp;scp.scps=scope%3A%28SJT%29%2Cscope%3A%28sjtu_metadata%29%2Cscope%3A%28sjtu_sfx%29%2Cscope%3A%28sjtulibzw%29%2Cscope%3A%28sjtulibxw%29%2CDuxiuBook&amp;tab=default_tab&amp;dstmp=1455332763123&amp;gathStatTab=true&amp;vl(freeText0)=git&amp;vid=chinese&amp;tabs=detailsTab&amp;gathStatTab=true" title="">详细信息</a>
+                                <!-- rum statistics -->
+
+                                <input type="hidden" class="gatherpagestat" value="true" />
+
+<!-- For Alma Services Page -->
+<input type="hidden" class="EXLTabBoomId" id="details_0" 
+		value="A=Primo_Local&amp;I=SJT&amp;S=68559BAB8F7B9A06C7BC6EB08A742CB7&amp;IP=202.121.183.49&amp;SRVR=primofe.lib.sjtu.edu.cn&amp;P=brief&amp;OP=detailsTab&amp;M=&amp;TYP=Page_View_4.1.1.131211&amp;G=&amp;O=%261%26%26book%26SJT%26上海交通大学图书馆%26http://sfx.lib.sjtu.edu.cn:3210/sfxlcl3?url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-sjtulibxw&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:book&amp;rft.genre=book&amp;rft.atitle=&amp;rft.jtitle=&amp;rft.btitle=Version%20control%20with%20Git%20=%20Git版本控制&amp;rft.aulast=Loeliger&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Loeliger%2C%20Jon&amp;rft.aucorp=&amp;rft.volume=&amp;rft.issue=&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=&amp;rft.epage=&amp;rft.pages=&amp;rft.artnum=&amp;rft.issn=&amp;rft.eissn=&amp;rft.isbn=9787564141967&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/&amp;rft.object_id=&amp;rft.eisbn=&amp;rft_dat=&lt;sjtulibxw&gt;000311379&lt;/sjtulibxw&gt;&lt;grp_id&gt;50806657&lt;/grp_id&gt;&lt;oa&gt;&lt;/oa&gt;&amp;rft_id=info:oai/&gt;&amp;req.language=chi%26&amp;O1=Primo Local&amp;O2=sjtulibxw&amp;O3=sjtulibxw000311379&amp;O4=details&amp;O5=PRD.86SJT.SJT&amp;O6=50806657&amp;O7=0&amp;O8=&amp;O9=&amp;"/>
+<input type="hidden" class="boombaseurl" value="http://beacon01.alma.exlibrisgroup.com/boom/apache_pb.gif" />
+
+<!-- end rum statistics -->
+                          </li>
+                          <!-- index: 4 length: 10 -->
+                        <li id="exlidResult0-ReviewsTab" class="EXLReviewsTab EXLResultTab "><a href="display.do?ct=display&amp;fn=search&amp;doc=sjtulibxw000311379&amp;indx=1&amp;recIds=sjtulibxw000311379&amp;recIdxs=0&amp;elementId=0&amp;renderMode=poppedOut&amp;displayMode=full&amp;dscnt=0&amp;frbrVersion=3&amp;scp.scps=scope%3A%28SJT%29%2Cscope%3A%28sjtu_metadata%29%2Cscope%3A%28sjtu_sfx%29%2Cscope%3A%28sjtulibzw%29%2Cscope%3A%28sjtulibxw%29%2CDuxiuBook&amp;tab=default_tab&amp;dstmp=1455332763123&amp;gathStatTab=true&amp;vl(freeText0)=git&amp;vid=chinese&amp;tabs=tagreviewsTab&amp;gathStatTab=true" title="">评论/标签</a>
+                                <!-- rum statistics -->
+
+                                <input type="hidden" class="gatherpagestat" value="true" />
+
+<!-- For Alma Services Page -->
+<input type="hidden" class="EXLTabBoomId" id="tagsreview_0" 
+		value="A=Primo_Local&amp;I=SJT&amp;S=68559BAB8F7B9A06C7BC6EB08A742CB7&amp;IP=202.121.183.49&amp;SRVR=primofe.lib.sjtu.edu.cn&amp;P=brief&amp;OP=tagReviewTab&amp;M=&amp;TYP=Page_View_4.1.1.131211&amp;G=&amp;O=%261%26%26book%26SJT%26上海交通大学图书馆%26http://sfx.lib.sjtu.edu.cn:3210/sfxlcl3?url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-sjtulibxw&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:book&amp;rft.genre=book&amp;rft.atitle=&amp;rft.jtitle=&amp;rft.btitle=Version%20control%20with%20Git%20=%20Git版本控制&amp;rft.aulast=Loeliger&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Loeliger%2C%20Jon&amp;rft.aucorp=&amp;rft.volume=&amp;rft.issue=&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=&amp;rft.epage=&amp;rft.pages=&amp;rft.artnum=&amp;rft.issn=&amp;rft.eissn=&amp;rft.isbn=9787564141967&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/&amp;rft.object_id=&amp;rft.eisbn=&amp;rft_dat=&lt;sjtulibxw&gt;000311379&lt;/sjtulibxw&gt;&lt;grp_id&gt;50806657&lt;/grp_id&gt;&lt;oa&gt;&lt;/oa&gt;&amp;rft_id=info:oai/&gt;&amp;req.language=chi%26&amp;O1=Primo Local&amp;O2=sjtulibxw&amp;O3=sjtulibxw000311379&amp;O4=tagsreview&amp;O5=PRD.86SJT.SJT&amp;O6=50806657&amp;O7=0&amp;O8=&amp;O9=&amp;"/>
+<input type="hidden" class="boombaseurl" value="http://beacon01.alma.exlibrisgroup.com/boom/apache_pb.gif" />
+
+<!-- end rum statistics -->
+                          </li>
+                          <!-- index: 5 length: 10 -->
+                        <li id="exlidResult0-RecommendTab" class="EXLRecommendTab EXLResultTab "><a href="display.do?ct=display&amp;fn=search&amp;doc=sjtulibxw000311379&amp;indx=1&amp;recIds=sjtulibxw000311379&amp;recIdxs=0&amp;elementId=0&amp;renderMode=poppedOut&amp;displayMode=full&amp;dscnt=0&amp;frbrVersion=3&amp;scp.scps=scope%3A%28SJT%29%2Cscope%3A%28sjtu_metadata%29%2Cscope%3A%28sjtu_sfx%29%2Cscope%3A%28sjtulibzw%29%2Cscope%3A%28sjtulibxw%29%2CDuxiuBook&amp;tab=default_tab&amp;dstmp=1455332763123&amp;gathStatTab=true&amp;vl(freeText0)=git&amp;vid=chinese&amp;tabs=recommendTab&amp;gathStatTab=true" title="导入推荐列表，请稍等。" id="exlidHref0">相关资源推荐</a>
+                                <!-- rum statistics -->
+
+                                <input type="hidden" class="gatherpagestat" value="true" />
+
+<!-- For Alma Services Page -->
+<input type="hidden" class="EXLTabBoomId" id="recommendation_0" 
+		value="A=Primo_Local&amp;I=SJT&amp;S=68559BAB8F7B9A06C7BC6EB08A742CB7&amp;IP=202.121.183.49&amp;SRVR=primofe.lib.sjtu.edu.cn&amp;P=brief&amp;OP=recommendationTab&amp;M=&amp;TYP=Page_View_4.1.1.131211&amp;G=&amp;O=%261%26%26book%26SJT%26上海交通大学图书馆%26http://sfx.lib.sjtu.edu.cn:3210/sfxlcl3?url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-sjtulibxw&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:book&amp;rft.genre=book&amp;rft.atitle=&amp;rft.jtitle=&amp;rft.btitle=Version%20control%20with%20Git%20=%20Git版本控制&amp;rft.aulast=Loeliger&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Loeliger%2C%20Jon&amp;rft.aucorp=&amp;rft.volume=&amp;rft.issue=&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=&amp;rft.epage=&amp;rft.pages=&amp;rft.artnum=&amp;rft.issn=&amp;rft.eissn=&amp;rft.isbn=9787564141967&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/&amp;rft.object_id=&amp;rft.eisbn=&amp;rft_dat=&lt;sjtulibxw&gt;000311379&lt;/sjtulibxw&gt;&lt;grp_id&gt;50806657&lt;/grp_id&gt;&lt;oa&gt;&lt;/oa&gt;&amp;rft_id=info:oai/&gt;&amp;req.language=chi%26&amp;O1=Primo Local&amp;O2=sjtulibxw&amp;O3=sjtulibxw000311379&amp;O4=recommendation&amp;O5=PRD.86SJT.SJT&amp;O6=50806657&amp;O7=0&amp;O8=&amp;O9=&amp;"/>
+<input type="hidden" class="boombaseurl" value="http://beacon01.alma.exlibrisgroup.com/boom/apache_pb.gif" />
+
+<!-- end rum statistics -->
+                        </li>
+                        <!-- index: 6 length: 10 -->
+                        <li id="exlidResult0-MoreTab" class="EXLMoreTab EXLResultTab EXLResultTabIconPopout">
+                                <a href="http://sfx.lib.sjtu.edu.cn:3210/sfxlcl3?url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-sjtulibxw&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:book&amp;rft.genre=book&amp;rft.atitle=&amp;rft.jtitle=&amp;rft.btitle=Version%20control%20with%20Git%20=%20Git版本控制&amp;rft.aulast=Loeliger&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Loeliger%2C%20Jon&amp;rft.aucorp=&amp;rft.volume=&amp;rft.issue=&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=&amp;rft.epage=&amp;rft.pages=&amp;rft.artnum=&amp;rft.issn=&amp;rft.eissn=&amp;rft.isbn=9787564141967&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/&amp;rft.object_id=&amp;rft.eisbn=&amp;rft_dat=&lt;sjtulibxw&gt;000311379&lt;/sjtulibxw&gt;&lt;grp_id&gt;50806657&lt;/grp_id&gt;&lt;oa&gt;&lt;/oa&gt;&amp;rft_id=info:oai/&gt;&amp;req.language=chi" title="" target='_blank'>
+                                其他信息</a>
+                                <!-- rum statistics -->
+
+                                <input type="hidden" class="gatherpagestat" value="true" />
+
+<!-- For Alma Services Page -->
+<input type="hidden" class="EXLTabBoomId" id="getit2_0" 
+		value="A=Primo_Local&amp;I=SJT&amp;S=68559BAB8F7B9A06C7BC6EB08A742CB7&amp;IP=202.121.183.49&amp;SRVR=primofe.lib.sjtu.edu.cn&amp;P=brief&amp;OP=getit2&amp;M=&amp;TYP=Page_View_4.1.1.131211&amp;G=&amp;O=%261%26%26book%26SJT%26上海交通大学图书馆%26http://sfx.lib.sjtu.edu.cn:3210/sfxlcl3?url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-sjtulibxw&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:book&amp;rft.genre=book&amp;rft.atitle=&amp;rft.jtitle=&amp;rft.btitle=Version%20control%20with%20Git%20=%20Git版本控制&amp;rft.aulast=Loeliger&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Loeliger%2C%20Jon&amp;rft.aucorp=&amp;rft.volume=&amp;rft.issue=&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=&amp;rft.epage=&amp;rft.pages=&amp;rft.artnum=&amp;rft.issn=&amp;rft.eissn=&amp;rft.isbn=9787564141967&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/&amp;rft.object_id=&amp;rft.eisbn=&amp;rft_dat=&lt;sjtulibxw&gt;000311379&lt;/sjtulibxw&gt;&lt;grp_id&gt;50806657&lt;/grp_id&gt;&lt;oa&gt;&lt;/oa&gt;&amp;rft_id=info:oai/&gt;&amp;req.language=chi%26&amp;O1=Primo Local&amp;O2=sjtulibxw&amp;O3=sjtulibxw000311379&amp;O4=getit2,tab2_unavail,http://sfx.lib.sjtu.edu.cn:3210/sfxlcl3?url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-sjtulibxw&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:book&amp;rft.genre=book&amp;rft.atitle=&amp;rft.jtitle=&amp;rft.btitle=Version%20control%20with%20Git%20=%20Git版本控制&amp;rft.aulast=Loeliger&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Loeliger%2C%20Jon&amp;rft.aucorp=&amp;rft.volume=&amp;rft.issue=&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=&amp;rft.epage=&amp;rft.pages=&amp;rft.artnum=&amp;rft.issn=&amp;rft.eissn=&amp;rft.isbn=9787564141967&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/&amp;rft.object_id=&amp;rft.eisbn=&amp;rft_dat=&lt;sjtulibxw&gt;000311379&lt;/sjtulibxw&gt;&lt;grp_id&gt;50806657&lt;/grp_id&gt;&lt;oa&gt;&lt;/oa&gt;&amp;rft_id=info:oai/&gt;&amp;req.language=chi&amp;O5=PRD.86SJT.SJT&amp;O6=50806657&amp;O7=0&amp;O8=&amp;O9=&amp;"/>
+<input type="hidden" class="boombaseurl" value="http://beacon01.alma.exlibrisgroup.com/boom/apache_pb.gif" />
+
+<!-- end rum statistics -->
+                          </li>
+                          <!-- index: 7 length: 10 -->
+                        <!-- index: 8 length: 10 -->
+                        <!-- index: 9 length: 10 -->
+                        <li id="exlidResult0-BrowseshelfTab" class="EXLBrowseshelfTab EXLServiceBrowseshelfTab EXLResultTab EXLResultLastTab ">
+                  <!-- displayURL=display.do?ct=display&fn=search&doc=sjtulibxw000311379&indx=1&recIds=sjtulibxw000311379&recIdxs=0&elementId=0&renderMode=poppedOut&displayMode=full&dscnt=0&frbrVersion=3&scp.scps=scope%3A%28SJT%29%2Cscope%3A%28sjtu_metadata%29%2Cscope%3A%28sjtu_sfx%29%2Cscope%3A%28sjtulibzw%29%2Cscope%3A%28sjtulibxw%29%2CDuxiuBook&tab=default_tab&dstmp=1455332763123&gathStatTab=true&vl(freeText0)=git&vid=chinese -->
+	 	          <!-- taburl=display.do?tabs=browseshelfTab&gathStatTab=true&tabRealType=browseshelf&callNumber=tp311.561+l825v2+2013&callNumberBrowseField=browse_callnumber&ct=display&fn=search&doc=sjtulibxw000311379&indx=1&recIds=sjtulibxw000311379&recIdxs=0&elementId=0&renderMode=poppedOut&displayMode=full&dscnt=0&frbrVersion=3&scp.scps=scope%3A%28SJT%29%2Cscope%3A%28sjtu_metadata%29%2Cscope%3A%28sjtu_sfx%29%2Cscope%3A%28sjtulibzw%29%2Cscope%3A%28sjtulibxw%29%2CDuxiuBook&tab=default_tab&dstmp=1455332763123&gathStatTab=true&vl(freeText0)=git&vid=chinese -->
+
+                    <input class="EXLServiceBrowseShelfTabRecord" type="hidden" value="sjtulibxw000311379"/>
+                  <a href="display.do?tabs=browseshelfTab&amp;gathStatTab=true&amp;tabRealType=browseshelf&amp;callNumber=tp311.561+l825v2+2013&amp;callNumberBrowseField=browse_callnumber&amp;ct=display&amp;fn=search&amp;doc=sjtulibxw000311379&amp;indx=1&amp;recIds=sjtulibxw000311379&amp;recIdxs=0&amp;elementId=0&amp;renderMode=poppedOut&amp;displayMode=full&amp;dscnt=0&amp;frbrVersion=3&amp;scp.scps=scope%3A%28SJT%29%2Cscope%3A%28sjtu_metadata%29%2Cscope%3A%28sjtu_sfx%29%2Cscope%3A%28sjtulibzw%29%2Cscope%3A%28sjtulibxw%29%2CDuxiuBook&amp;tab=default_tab&amp;dstmp=1455332763123&amp;gathStatTab=true&amp;vl(freeText0)=git&amp;vid=chinese" title="">
+                  虚拟书架</a>
+
+                                <!-- rum statistics -->
+                                <input type="hidden" class="gatherpagestat" value="true" />
+
+<!-- For Alma Services Page -->
+<input type="hidden" class="EXLTabBoomId" id="browseshelf_0" 
+		value="A=Primo_Local&amp;I=SJT&amp;S=68559BAB8F7B9A06C7BC6EB08A742CB7&amp;IP=202.121.183.49&amp;SRVR=primofe.lib.sjtu.edu.cn&amp;P=brief&amp;OP=browseshelf&amp;M=&amp;TYP=Page_View_4.1.1.131211&amp;G=&amp;O=%261%26%26book%26SJT%26上海交通大学图书馆%26http://sfx.lib.sjtu.edu.cn:3210/sfxlcl3?url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-sjtulibxw&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:book&amp;rft.genre=book&amp;rft.atitle=&amp;rft.jtitle=&amp;rft.btitle=Version%20control%20with%20Git%20=%20Git版本控制&amp;rft.aulast=Loeliger&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Loeliger%2C%20Jon&amp;rft.aucorp=&amp;rft.volume=&amp;rft.issue=&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=&amp;rft.epage=&amp;rft.pages=&amp;rft.artnum=&amp;rft.issn=&amp;rft.eissn=&amp;rft.isbn=9787564141967&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/&amp;rft.object_id=&amp;rft.eisbn=&amp;rft_dat=&lt;sjtulibxw&gt;000311379&lt;/sjtulibxw&gt;&lt;grp_id&gt;50806657&lt;/grp_id&gt;&lt;oa&gt;&lt;/oa&gt;&amp;rft_id=info:oai/&gt;&amp;req.language=chi%26&amp;O1=Primo Local&amp;O2=sjtulibxw&amp;O3=sjtulibxw000311379&amp;O4=browseshelf&amp;O5=PRD.86SJT.SJT&amp;O6=50806657&amp;O7=0&amp;O8=&amp;O9=&amp;"/>
+<input type="hidden" class="boombaseurl" value="http://beacon01.alma.exlibrisgroup.com/boom/apache_pb.gif" />
+
+<!-- end rum statistics -->
+                          </li>
+                          </ul>
+</div>
+    </div>
+                <!-- tabs[0]: locationsTab -->
+                <div id="exlidResult0-TabContainer-viewOnlineTab" class="EXLResultTabContainer EXLContainer-viewOnlineTab EXLResultTabContainerClosed">
+                </div>
+            <div id="exlidResult0-TabContainer-requestTab" class="EXLResultTabContainer EXLContainer-requestTab EXLResultTabContainerClosed">
+                </div>
+            <div id="exlidResult0-TabContainer-locationsTab" class="EXLResultTabContainer EXLContainer-locationsTab ">
+                <!-- renderTabContent.tag begin -->
+<!-- tabKey = locationsTab -->
+<!-- loading live -->
+		<!-- renderer(sjtulibxw000311379)= /views/full/tabs/locations_tile.jsp -->
+			<!-- taglibsIncludeAll.jspf begin -->
+<!-- taglibsIncludeAll.jspf end --><!--  include setSearchForm.jspf before -->
+<!-- setSearchForm.jspf begin -->
+<!-- taglibsIncludeAll.jspf begin -->
+<!-- taglibsIncludeAll.jspf end --><!-- setSearchForm.jspf end --><!--  include setSearchForm.jspf after   -->
+<form name="locationsTabForm" method="post" action="/primo_library/libweb/action/locations.do"><input type="hidden" name="func(sjtulibxw000311379)" value="submit" /><input type="hidden" name="fn" value="submit" /><input type="hidden" name="recIds" value="sjtulibxw000311379" /><input type="hidden" name="tabs" value="locationsTab" /><input type="hidden" name="recIdxs" value="-1" /><input type="hidden" name="elementId" value="exlidResult0-TabContainer" /><input type="hidden" name="renderMode" value="prefetchXml" /><input type="hidden" name="displayMode" value="full" /><input type="hidden" name="startPosition" value="1" /><input type="hidden" id="clickedId"/>
+
+	<div id="exlidResult-1-TabHeader" class="EXLTabHeader">
+      <div class="EXLTabHeaderContent"> </div>
+      <div id="exlidTabHeaderButtons-1" class="EXLTabHeaderButtons">
+        <!--begin sendTo Ribbon-->
+	          	<ul>
+	<li class="EXLTabHeaderButtonSendTo">
+  		<a href="#" name="insjtulibxw000311379_10e172ce" id="insjtulibxw000311379_10e172ce" 
+  			title="显示"发送到"选项">
+  		<span></span>
+  		发送到<img src="../images/icon_arrow_sendTo.png" alt=""/>
+  		</a>
+		<ol class="EXLTabHeaderButtonSendToList">
+			<li class="EXLButtonSendToMyShelf EXLButtonSendToMyShelfAdd">
+					<a href="basket.do?fn=create&amp;docs=sjtulibxw000311379&amp;exemode=async" 
+						onclick="boomCallToRum('eShelf_-1',false);javascript:eshelfCreate(this,'sjtulibxw000311379','false','scope:(SJT),scope:(sjtu_metadata),scope:(sjtu_sfx),scope:(sjtulibzw),scope:(sjtulibxw)','0');return false;" 
+						title="添加到“我的电子书架”" target="blank">
+					<span class="EXLButtonSendToLabel">添加到“我的电子书架”</span>
+					<span class="EXLButtonSendToIcon EXLButtonSendToIconMyShelf"></span>
+					</a>
+				</li>
+				<li class="EXLButtonSendToMyShelf EXLButtonSendToMyShelfRemove">
+					<a href="basket.do?fn=remove&amp;docs=sjtulibxw000311379&amp;exemode=async" 
+						onclick="boomCallToRum('sendTo_eshelfRemove_-1',false);javascript:eshelfRemove(this,'sjtulibxw000311379','false','scope:(SJT),scope:(sjtu_metadata),scope:(sjtu_sfx),scope:(sjtulibzw),scope:(sjtulibxw)','0');return false;" 
+						title="从“我的电子书架”中删除" target="blank">
+					<span class="EXLButtonSendToLabel">从“我的电子书架”中删除</span>
+					<span class="EXLButtonSendToIcon EXLButtonSendToIconMyShelf"></span>
+					</a>
+				</li>
+			<li class="EXLButtonSendToMail">
+				<a href="email.do?fn=email&amp;docs=sjtulibxw000311379&amp;vid=chinese&amp;fromCommand=true&amp;doc=sjtulibxw000311379&amp;scope=scope%3a(SJT)%2cscope%3a(sjtu_metadata)%2cscope%3a(sjtu_sfx)%2cscope%3a(sjtulibzw)%2cscope%3a(sjtulibxw)%2cDuxiuBook&amp;indx=1&amp;" onclick="boomCallToRum('sendTo_email_-1',false);javascript:sendPrintPopOut(this);return false;" 
+					title="用电子邮件发送记录（打开一个新的窗口）" target="blank">
+				<span class="EXLButtonSendToLabel">电子邮件</span>
+				<span class="EXLButtonSendToIcon EXLButtonSendToIconMail"></span>
+				</a>
+			</li>
+			
+			<li class="EXLButtonSendToPrint">
+				<a href="display.do?fn=print&amp;tab=default_tab&amp;indx=1&amp;display=print&amp;docs=sjtulibxw000311379&amp;indx=1&amp;" onclick="boomCallToRum('sendTo_print_-1',false);javascript:sendPrintPopOut(this);return false;" 
+					title="打印记录  (打开一个新窗口)"  target="blank">
+				<span class="EXLButtonSendToLabel">打印</span>
+				<span class="EXLButtonSendToIcon EXLButtonSendToIconPrint"></span>
+				</a>
+			</li>
+		
+			<li class="EXLButtonSendToPermalink">
+		  			<a href="permalink.do?docId=sjtulibxw000311379&amp;vid=chinese&amp;fn=permalink" onclick="boomCallToRum('sendTo_Permalink_-1',false);javascript:openPermaLinkLbox('permalink','docId=sjtulibxw000311379&amp;vid=chinese&amp;fn=permalink','-1','sjtulibxw000311379');return false;" 
+		  				title="Permanent URL for this record"  target="blank">
+		  			<span class="EXLButtonSendToLabel">Permalink</span>
+		  			<span class="EXLButtonSendToIcon EXLButtonSendToIconPermalink"></span></a>
+		  		</li>
+	  		<li class="EXLButtonSendToCitation">
+				<a href="#" onclick="boomCallToRum('sendTo_citation_-1',false);openCitationLbox('-1','sjtulibxw000311379');return false;" 
+					title="Bibliographic citation for this title"  target="blank">
+				<span class="EXLButtonSendToLabel">Citation</span> 
+				<span class="EXLButtonSendToIcon EXLButtonSendToIconCitation"></span>
+				</a>
+			</li>
+			
+			<li class="EXLButtonSendToDelicious">
+					<a href="PushToAction.do?recId=sjtulibxw000311379&amp;pushToType=EndNote&amp;fromEshelf=false"
+							title="添加到EndNote"
+							onclick="boomCallToRum('sendTo_pushto_-1_0',false);pushto('EndNote','1','false','sjtulibxw000311379');return false;"
+							target="blank">
+						<span class="EXLButtonSendToLabel">
+							EndNote</span>
+						<span class="EXLButtonSendToIcon EXLButtonSendToIconEndNote"></span>
+					</a>
+				</li>
+			<li class="EXLButtonSendToDelicious">
+					<a href="PushToAction.do?recId=sjtulibxw000311379&amp;pushToType=RefWorks&amp;fromEshelf=false"
+							title="添加到RefWorks"
+							onclick="boomCallToRum('sendTo_pushto_-1_1',false);pushto('RefWorks','1','false','sjtulibxw000311379');return false;"
+							target="blank">
+						<span class="EXLButtonSendToLabel">
+							RefWorks</span>
+						<span class="EXLButtonSendToIcon EXLButtonSendToIconRefWorks"></span>
+					</a>
+				</li>
+			<li class="EXLButtonSendToDelicious">
+					<a href="PushToAction.do?recId=sjtulibxw000311379&amp;pushToType=Delicious&amp;fromEshelf=false"
+							title="添加到Delicious"
+							onclick="boomCallToRum('sendTo_pushto_-1_2',false);pushto('Delicious','1','false','sjtulibxw000311379');return false;"
+							target="blank">
+						<span class="EXLButtonSendToLabel">
+							del.icio.us</span>
+						<span class="EXLButtonSendToIcon EXLButtonSendToIconDelicious"></span>
+					</a>
+				</li>
+			<li class="EXLButtonSendToDelicious">
+					<a href="PushToAction.do?recId=sjtulibxw000311379&amp;pushToType=RISPushTo&amp;fromEshelf=false"
+							title="添加到RISPushTo"
+							onclick="boomCallToRum('sendTo_pushto_-1_3',false);pushto('RISPushTo','1','false','sjtulibxw000311379');return false;"
+							target="blank">
+						<span class="EXLButtonSendToLabel">
+							导入 RIS</span>
+						<span class="EXLButtonSendToIcon EXLButtonSendToIconRISPushTo"></span>
+					</a>
+				</li>
+			</ol>
+	</li>
+	</ul>
+
+<input type="hidden" class="gatherpagestat" value="true" />
+
+<!-- For Alma Services Page -->
+<input type="hidden" class="EXLTabBoomId" id="sendTo_pushto_-1_0" 
+		value="A=Primo_Local&amp;I=SJT&amp;S=68559BAB8F7B9A06C7BC6EB08A742CB7&amp;IP=202.121.183.49&amp;SRVR=primofe.lib.sjtu.edu.cn&amp;P=sendTo&amp;OP=option&amp;M=&amp;TYP=Page_View_4.1.1.131211&amp;G=&amp;O=%260%26%26%26SJT%26上海交通大学图书馆%26%26&amp;O1=&amp;O2=&amp;O3=&amp;O4=sendto,pushto,EndNote&amp;O5=PRD.86SJT.SJT&amp;O6=&amp;O7=0&amp;O8=git&amp;O9=&amp;"/>
+<input type="hidden" class="boombaseurl" value="http://beacon01.alma.exlibrisgroup.com/boom/apache_pb.gif" />
+
+<input type="hidden" class="gatherpagestat" value="true" />
+
+<!-- For Alma Services Page -->
+<input type="hidden" class="EXLTabBoomId" id="sendTo_pushto_-1_1" 
+		value="A=Primo_Local&amp;I=SJT&amp;S=68559BAB8F7B9A06C7BC6EB08A742CB7&amp;IP=202.121.183.49&amp;SRVR=primofe.lib.sjtu.edu.cn&amp;P=sendTo&amp;OP=option&amp;M=&amp;TYP=Page_View_4.1.1.131211&amp;G=&amp;O=%260%26%26%26SJT%26上海交通大学图书馆%26%26&amp;O1=&amp;O2=&amp;O3=&amp;O4=sendto,pushto,RefWorks&amp;O5=PRD.86SJT.SJT&amp;O6=&amp;O7=0&amp;O8=git&amp;O9=&amp;"/>
+<input type="hidden" class="boombaseurl" value="http://beacon01.alma.exlibrisgroup.com/boom/apache_pb.gif" />
+
+<input type="hidden" class="gatherpagestat" value="true" />
+
+<!-- For Alma Services Page -->
+<input type="hidden" class="EXLTabBoomId" id="sendTo_pushto_-1_2" 
+		value="A=Primo_Local&amp;I=SJT&amp;S=68559BAB8F7B9A06C7BC6EB08A742CB7&amp;IP=202.121.183.49&amp;SRVR=primofe.lib.sjtu.edu.cn&amp;P=sendTo&amp;OP=option&amp;M=&amp;TYP=Page_View_4.1.1.131211&amp;G=&amp;O=%260%26%26%26SJT%26上海交通大学图书馆%26%26&amp;O1=&amp;O2=&amp;O3=&amp;O4=sendto,pushto,Delicious&amp;O5=PRD.86SJT.SJT&amp;O6=&amp;O7=0&amp;O8=git&amp;O9=&amp;"/>
+<input type="hidden" class="boombaseurl" value="http://beacon01.alma.exlibrisgroup.com/boom/apache_pb.gif" />
+
+<input type="hidden" class="gatherpagestat" value="true" />
+
+<!-- For Alma Services Page -->
+<input type="hidden" class="EXLTabBoomId" id="sendTo_pushto_-1_3" 
+		value="A=Primo_Local&amp;I=SJT&amp;S=68559BAB8F7B9A06C7BC6EB08A742CB7&amp;IP=202.121.183.49&amp;SRVR=primofe.lib.sjtu.edu.cn&amp;P=sendTo&amp;OP=option&amp;M=&amp;TYP=Page_View_4.1.1.131211&amp;G=&amp;O=%260%26%26%26SJT%26上海交通大学图书馆%26%26&amp;O1=&amp;O2=&amp;O3=&amp;O4=sendto,pushto,RISPushTo&amp;O5=PRD.86SJT.SJT&amp;O6=&amp;O7=0&amp;O8=git&amp;O9=&amp;"/>
+<input type="hidden" class="boombaseurl" value="http://beacon01.alma.exlibrisgroup.com/boom/apache_pb.gif" />
+
+<input type="hidden" class="gatherpagestat" value="true" />
+
+<!-- For Alma Services Page -->
+<input type="hidden" class="EXLTabBoomId" id="sendTo_eshelfRemove_-1" 
+		value="A=Primo_Local&amp;I=SJT&amp;S=68559BAB8F7B9A06C7BC6EB08A742CB7&amp;IP=202.121.183.49&amp;SRVR=primofe.lib.sjtu.edu.cn&amp;P=sendTo&amp;OP=option&amp;M=&amp;TYP=Page_View_4.1.1.131211&amp;G=&amp;O=%260%26%26%26SJT%26上海交通大学图书馆%26%26&amp;O1=&amp;O2=&amp;O3=&amp;O4=sendto,eshelfRemove&amp;O5=PRD.86SJT.SJT&amp;O6=&amp;O7=0&amp;O8=git&amp;O9=&amp;"/>
+<input type="hidden" class="boombaseurl" value="http://beacon01.alma.exlibrisgroup.com/boom/apache_pb.gif" />
+
+<input type="hidden" class="gatherpagestat" value="true" />
+
+<!-- For Alma Services Page -->
+<input type="hidden" class="EXLTabBoomId" id="sendTo_sms_-1" 
+		value="A=Primo_Local&amp;I=SJT&amp;S=68559BAB8F7B9A06C7BC6EB08A742CB7&amp;IP=202.121.183.49&amp;SRVR=primofe.lib.sjtu.edu.cn&amp;P=sendTo&amp;OP=option&amp;M=&amp;TYP=Page_View_4.1.1.131211&amp;G=&amp;O=%260%26%26%26SJT%26上海交通大学图书馆%26%26&amp;O1=&amp;O2=&amp;O3=&amp;O4=sendto,sms&amp;O5=PRD.86SJT.SJT&amp;O6=&amp;O7=0&amp;O8=git&amp;O9=&amp;"/>
+<input type="hidden" class="boombaseurl" value="http://beacon01.alma.exlibrisgroup.com/boom/apache_pb.gif" />
+
+<input type="hidden" class="gatherpagestat" value="true" />
+
+<!-- For Alma Services Page -->
+<input type="hidden" class="EXLTabBoomId" id="sendTo_email_-1" 
+		value="A=Primo_Local&amp;I=SJT&amp;S=68559BAB8F7B9A06C7BC6EB08A742CB7&amp;IP=202.121.183.49&amp;SRVR=primofe.lib.sjtu.edu.cn&amp;P=sendTo&amp;OP=option&amp;M=&amp;TYP=Page_View_4.1.1.131211&amp;G=&amp;O=%260%26%26%26SJT%26上海交通大学图书馆%26%26&amp;O1=&amp;O2=&amp;O3=&amp;O4=sendto,email&amp;O5=PRD.86SJT.SJT&amp;O6=&amp;O7=0&amp;O8=git&amp;O9=&amp;"/>
+<input type="hidden" class="boombaseurl" value="http://beacon01.alma.exlibrisgroup.com/boom/apache_pb.gif" />
+
+<input type="hidden" class="gatherpagestat" value="true" />
+
+<!-- For Alma Services Page -->
+<input type="hidden" class="EXLTabBoomId" id="sendTo_print_-1" 
+		value="A=Primo_Local&amp;I=SJT&amp;S=68559BAB8F7B9A06C7BC6EB08A742CB7&amp;IP=202.121.183.49&amp;SRVR=primofe.lib.sjtu.edu.cn&amp;P=sendTo&amp;OP=option&amp;M=&amp;TYP=Page_View_4.1.1.131211&amp;G=&amp;O=%260%26%26%26SJT%26上海交通大学图书馆%26%26&amp;O1=&amp;O2=&amp;O3=&amp;O4=sendto,print&amp;O5=PRD.86SJT.SJT&amp;O6=&amp;O7=0&amp;O8=git&amp;O9=&amp;"/>
+<input type="hidden" class="boombaseurl" value="http://beacon01.alma.exlibrisgroup.com/boom/apache_pb.gif" />
+
+<input type="hidden" class="gatherpagestat" value="true" />
+
+<!-- For Alma Services Page -->
+<input type="hidden" class="EXLTabBoomId" id="eShelf_-1" 
+		value="A=Primo_Local&amp;I=SJT&amp;S=68559BAB8F7B9A06C7BC6EB08A742CB7&amp;IP=202.121.183.49&amp;SRVR=primofe.lib.sjtu.edu.cn&amp;P=sendTo&amp;OP=eShelfSave&amp;M=&amp;TYP=Page_View_4.1.1.131211&amp;G=&amp;O=%260%26%26%26SJT%26上海交通大学图书馆%26%26&amp;O1=&amp;O2=&amp;O3=&amp;O4=save_to_eshelf&amp;O5=PRD.86SJT.SJT&amp;O6=&amp;O7=0&amp;O8=git&amp;O9=&amp;"/>
+<input type="hidden" class="boombaseurl" value="http://beacon01.alma.exlibrisgroup.com/boom/apache_pb.gif" />
+
+<input type="hidden" class="gatherpagestat" value="true" />
+
+<!-- For Alma Services Page -->
+<input type="hidden" class="EXLTabBoomId" id="sendTo_pushto_-1" 
+		value="A=Primo_Local&amp;I=SJT&amp;S=68559BAB8F7B9A06C7BC6EB08A742CB7&amp;IP=202.121.183.49&amp;SRVR=primofe.lib.sjtu.edu.cn&amp;P=sendTo&amp;OP=option&amp;M=&amp;TYP=Page_View_4.1.1.131211&amp;G=&amp;O=%260%26%26%26SJT%26上海交通大学图书馆%26%26&amp;O1=&amp;O2=&amp;O3=&amp;O4=sendto,pushto,RISPushTo&amp;O5=PRD.86SJT.SJT&amp;O6=&amp;O7=0&amp;O8=git&amp;O9=&amp;"/>
+<input type="hidden" class="boombaseurl" value="http://beacon01.alma.exlibrisgroup.com/boom/apache_pb.gif" />
+
+<input type="hidden" class="gatherpagestat" value="true" />
+
+<!-- For Alma Services Page -->
+<input type="hidden" class="EXLTabBoomId" id="sendTo_citation_-1" 
+		value="A=Primo_Local&amp;I=SJT&amp;S=68559BAB8F7B9A06C7BC6EB08A742CB7&amp;IP=202.121.183.49&amp;SRVR=primofe.lib.sjtu.edu.cn&amp;P=sendTo&amp;OP=option&amp;M=&amp;TYP=Page_View_4.1.1.131211&amp;G=&amp;O=%260%26%26%26SJT%26上海交通大学图书馆%26%26&amp;O1=&amp;O2=&amp;O3=&amp;O4=sendto,easyBib,RISPushTo&amp;O5=PRD.86SJT.SJT&amp;O6=&amp;O7=0&amp;O8=git&amp;O9=&amp;"/>
+<input type="hidden" class="boombaseurl" value="http://beacon01.alma.exlibrisgroup.com/boom/apache_pb.gif" />
+
+<input type="hidden" class="gatherpagestat" value="true" />
+
+<!-- For Alma Services Page -->
+<input type="hidden" class="EXLTabBoomId" id="sendTo_Permalink_-1" 
+		value="A=Primo_Local&amp;I=SJT&amp;S=68559BAB8F7B9A06C7BC6EB08A742CB7&amp;IP=202.121.183.49&amp;SRVR=primofe.lib.sjtu.edu.cn&amp;P=sendTo&amp;OP=option&amp;M=&amp;TYP=Page_View_4.1.1.131211&amp;G=&amp;O=%260%26%26%26SJT%26上海交通大学图书馆%26%26&amp;O1=&amp;O2=&amp;O3=&amp;O4=sendto,Permalink&amp;O5=PRD.86SJT.SJT&amp;O6=&amp;O7=0&amp;O8=git&amp;O9=&amp;"/>
+<input type="hidden" class="boombaseurl" value="http://beacon01.alma.exlibrisgroup.com/boom/apache_pb.gif" />
+
+<script type="text/javascript">
+	ineshelfInit('sjtulibxw000311379','off');
+ </script>
+<noscript>This feature requires javascript</noscript><!--end sendTo Ribbon-->
+      </div>
+
+    </div>
+
+	<!-- defect 7768 -->
+	<div id="exlidResult-1-TabContent" class="EXLTabContent EXLLocationsTabContent">
+		<div style="display:none" id="refresh-1" class="EXLTabMessage EXLTabLocationsRtaRefresh">		
+			<strong>馆藏地可能发生变化<a href="display.do?tabs=locationsTab&amp;ct=display&amp;fn=search&amp;doc=sjtulibxw000311379&amp;indx=-1-1&amp;recIds=sjtulibxw000311379&amp;recIdxs=-1&amp;tabsProcess=RTARefreshTab&amp;elementId=&amp;renderMode=poppedOut&amp;displayMode=full&amp;frbrVersion=&amp;dscnt=0&amp;frbrVersion=3&amp;scp.scps=scope%3A(SJT)%2Cscope%3A(sjtu_metadata)%2Cscope%3A(sjtu_sfx)%2Cscope%3A(sjtulibzw)%2Cscope%3A(sjtulibxw)%2CDuxiuBook&amp;tab=default_tab&amp;dstmp=1455332763123&amp;gathStatTab=true&amp;vl(freeText0)=git&amp;vid=chinese" id="RefreshUrl-1">
+		更新馆藏地</a></strong>
+		</div> 
+		<div class="EXLLocationListContainer EXLLocationListContainer17">
+
+	  <!--location1-->
+	  <!-- IMPORTANT 	If you change this logic be sure to fix rtaAvailability.js START-->
+
+		<!-- IMPORTANT 	If you change this logic be sure to fix rtaAvailability.js END-->
+		<div class="EXLLocationList"><span class="EXLLocationsTitle">
+								<span class="EXLLocationsTitleContainer">
+									主馆图书</span>
+							</span><span class="EXLLocationInfo">
+				<strong>B区3楼工II阅览室外文图书</strong>
+				<cite>(TP311.561 L825V2 2013 )</cite>
+						<!-- IMPORTANT	If you change this logic be sure to fix rtaAction.java START-->
+						<!-- IMPORTANT	If you change this logic be sure to fix rtaAction.java END-->
+						<em id="rtaReturnedStatusSJT090003113791218563210-40544592468195989611213936112" class="EXLResultStatusNotAvailable">不在架上</em>
+			</span>
+	 		<br/>
+			<div class="EXLSublocation" id="SJT090003113791218563210-40544592468195989611213936112" >
+				<input type="hidden" id="locationElapsedTime" value = ""/>
+<input type="hidden" id="locationStartTime" value = ""/>
+
+<script type="text/javascript">
+  $('#locationStartTime').val(new Date().getTime());
+</script>
+
+<!--begin locationTable-->
+	<div class="EXLLocationsMoreInfo">
+		</div>
+
+	<table id="locationsTable0" cellspacing="0"  summary="summary place holder" class="EXLLocationTable">
+			<tr class="EXLLocationTitlesRow">
+				<th scope="col" class="EXLLocationTableHeaderColumn0 EXLLocationTableMargin">
+						位置</th>
+				<th scope="col" class="EXLLocationTableHeaderColumn1">
+						索书号</th>
+				<th scope="col" class="EXLLocationTableHeaderColumn2">
+						单册状态</th>
+				<th scope="col" class="EXLLocationTableHeaderColumn3">
+						应还日期</th>
+				<th scope="col" class="EXLLocationTableHeaderColumn4">
+						条码</th>
+				<th scope="col" class="EXLLocationTableHeaderColumn5">
+						书目类型</th>
+				<th scope="col" class="EXLLocationTableHeaderActions">预约续借</th>
+			</tr>
+
+			<tr class="">
+					<td class="EXLLocationTableMargin EXLAdditionalFieldsLink EXLHideInfo EXLLocationLink-1_0">
+									<a href="#" title="显示馆藏地详细信息">主馆图书  B区3楼工II阅览室外文图书 </a>
+								</td>
+							<td class="EXLLocationTableColumn1">TP311.561 L825V2 2013 </td>
+							<td class="EXLLocationTableColumn2">可外借 </td>
+							<td class="EXLLocationTableColumn3">20160301 </td>
+							<td class="EXLLocationTableColumn4">E1274331 </td>
+							<td class="EXLLocationTableColumn5">图书 </td>
+							<td>
+						<!-- Request Options -->
+						<div class="EXLLocationTableActions"> <span class="EXLLocationTableActionsLabel">Select Request Option: </span>
+   							<div class="EXLLocationTableActionsMenu">
+								<ul>
+									<li class="EXLLocationTableActionsFirstItem">
+												<!-- popOutUrlForLogin is defined in renderXml.jsp -->     		
+												<a href="login.do?loginFn=signin&amp;vid=chinese&amp;targetURL=display.do%3fct%3ddisplay%26fn%3dsearch%26doc%3dsjtulibxw000311379%26indx%3d1%26recIds%3dsjtulibxw000311379%26recIdxs%3d-1%26elementId%3d%26renderMode%3dpoppedOut%26displayMode%3dfull%26http%3a%2f%2fourex.lib.sjtu.edu.cn%3a80%2fprimo_library%2flibweb%2faction%2fdisplay.do%3fdscnt%3d0%26frbrVersion%3d3%26scp.scps%3dscope%253A%2528SJT%2529%252Cscope%253A%2528sjtu_metadata%2529%252Cscope%253A%2528sjtu_sfx%2529%252Cscope%253A%2528sjtulibzw%2529%252Cscope%253A%2528sjtulibxw%2529%252CDuxiuBook%26tab%3ddefault_tab%26dstmp%3d1455332763123%26gathStatTab%3dtrue%26vl(freeText0)%3dgit%26vid%3dchinese%26recIds%3dsjtulibxw000311379%26tabs%3dlocationsTab" target="_parent" onclick="boomCallToRum('SignInStatLocations',false);addResolutionParam(this);" id="LOCATION_SIGN_IN_-1_0_0" title="登录">
+													请先登录</a>																						
+      										</li>
+										</ul>
+     						</div>
+   	 					</div>
+					</td>
+				</tr>
+
+				<!-- Detailed section -->
+				<tr class="EXLAdditionalFieldsRow  EXLLocationDetails-1">
+				    <td class="EXLLocationTableMargin EXLHideInfo" colspan="7">
+						 <ul>
+							<li><strong>馆藏地: </strong>主馆图书  B区3楼工II阅览室外文图书 </li>
+							<li><strong>索书号: </strong>TP311.561 L825V2 2013 </li>
+							<li><strong>状态: </strong>20160301 </li>
+							<li><strong>条码: </strong>E1274331 </li>
+							<li><strong>资料类型: </strong>图书 </li>
+							<li><strong>资料状态: </strong>可外借 </li>
+							</ul>
+					</td>
+				</tr>
+
+			<tr class="EXLLocationTableRowBgColor">
+					<td class="EXLLocationTableMargin EXLAdditionalFieldsLink EXLHideInfo EXLLocationLink-1_0">
+									<a href="#" title="显示馆藏地详细信息">主馆图书  B区3楼工II阅览室外文图书 </a>
+								</td>
+							<td class="EXLLocationTableColumn1">TP311.561 L825V2 2013 </td>
+							<td class="EXLLocationTableColumn2">可外借 </td>
+							<td class="EXLLocationTableColumn3">20160301 </td>
+							<td class="EXLLocationTableColumn4">E1274332 </td>
+							<td class="EXLLocationTableColumn5">图书 </td>
+							<td>
+						<!-- Request Options -->
+						<div class="EXLLocationTableActions"> <span class="EXLLocationTableActionsLabel">Select Request Option: </span>
+   							<div class="EXLLocationTableActionsMenu">
+								<ul>
+									<li class="EXLLocationTableActionsFirstItem">
+												<!-- popOutUrlForLogin is defined in renderXml.jsp -->     		
+												<a href="login.do?loginFn=signin&amp;vid=chinese&amp;targetURL=display.do%3fct%3ddisplay%26fn%3dsearch%26doc%3dsjtulibxw000311379%26indx%3d1%26recIds%3dsjtulibxw000311379%26recIdxs%3d-1%26elementId%3d%26renderMode%3dpoppedOut%26displayMode%3dfull%26http%3a%2f%2fourex.lib.sjtu.edu.cn%3a80%2fprimo_library%2flibweb%2faction%2fdisplay.do%3fdscnt%3d0%26frbrVersion%3d3%26scp.scps%3dscope%253A%2528SJT%2529%252Cscope%253A%2528sjtu_metadata%2529%252Cscope%253A%2528sjtu_sfx%2529%252Cscope%253A%2528sjtulibzw%2529%252Cscope%253A%2528sjtulibxw%2529%252CDuxiuBook%26tab%3ddefault_tab%26dstmp%3d1455332763123%26gathStatTab%3dtrue%26vl(freeText0)%3dgit%26vid%3dchinese%26recIds%3dsjtulibxw000311379%26tabs%3dlocationsTab" target="_parent" onclick="boomCallToRum('SignInStatLocations',false);addResolutionParam(this);" id="LOCATION_SIGN_IN_-1_0_1" title="登录">
+													请先登录</a>																						
+      										</li>
+										</ul>
+     						</div>
+   	 					</div>
+					</td>
+				</tr>
+
+				<!-- Detailed section -->
+				<tr class="EXLAdditionalFieldsRow EXLLocationTableRowBgColor EXLLocationDetails-1">
+				    <td class="EXLLocationTableMargin EXLHideInfo" colspan="7">
+						 <ul>
+							<li><strong>馆藏地: </strong>主馆图书  B区3楼工II阅览室外文图书 </li>
+							<li><strong>索书号: </strong>TP311.561 L825V2 2013 </li>
+							<li><strong>状态: </strong>20160301 </li>
+							<li><strong>条码: </strong>E1274332 </li>
+							<li><strong>资料类型: </strong>图书 </li>
+							<li><strong>资料状态: </strong>可外借 </li>
+							</ul>
+					</td>
+				</tr>
+
+			</table>
+
+ 
+					 
+		 
+ 		<script type="text/javascript">
+			addJSToButton('#moreInfoButton0', '0');
+			addJSToRow('.EXLLocationLink-1_0');
+
+			function addJSToButton(id, num) {
+				 $(id).click(function(e){
+						e.preventDefault();
+						$('#clickedId').val(num);
+						var tbl = $(this).parents('.EXLLocationList').find('.EXLLocationTable');
+						var tblm = $(this).parents('.EXLLocationList').find('.EXLLocationsMoreInfo');
+						var a = $(this);
+			 	 		//var url = $(this).get(0).href;	//the syntax to use if you don't have to support no-ajax cases
+			 	 		//when the code is working with ajax, a diferent url is called
+			 	 		var url = $('#locationPagingButtonForJS'+num).find('a')[0].href;
+						//alert(url);
+			 			fetchData(url, {'xxx':'xxx'});	//located in locations_tile.jsp
+				});
+			}
+
+			//Handles Details section
+			function addJSToRow(className) {
+				//remove previous onclick, since this will be called more
+				//than once on a td that already has an onclick set to it
+				$(className).removeClass('EXLHideInfo').addClass('EXLShowInfo').unbind('click');
+
+				$(className).removeClass('EXLHideInfo').addClass('EXLShowInfo').click(
+					function (e){
+						e.preventDefault();
+						if($(this).hasClass('EXLShowInfo')){
+                            
+                            $(this).children('a').attr('title','隐藏馆藏地详细信息');
+							$(this).removeClass('EXLShowInfo').addClass('EXLHideInfo').parents('tr').next('.EXLAdditionalFieldsRow').show();
+						}else{
+                            
+                            $(this).children('a').attr('title','显示馆藏地详细信息');
+							$(this).removeClass('EXLHideInfo').addClass('EXLShowInfo').parents('tr').next('.EXLAdditionalFieldsRow').hide();
+						}
+					});
+				$('.EXLLocationDetails-1').hide();
+			}
+
+	 	</script>
+	 	<noscript>This feature requires javascript</noscript>
+ 	<prm:boomerang id="SignInStatLocations" boomForm="com.exlibris.primo.search.DisplayForm@2eb10e23"
+	pageId="sign-in" opId="click"
+	resultDoc="com.exlibris.primo.srvinterface.RecordDocDTO@6a1733c7" type=""
+	delivery="DeliveryResponse:
+	 availabilityTextCodes: unavailable_in_institution
+	 deliveryCategory: Physical Item
+	 getItText: getit
+
+	 getIt1TabsData: 
+		 delivery category: Physical Item
+		 getItTabText: tab1_unavail
+		 signInText: null
+		 getItTabLinks: 
+	displayText: linktoholdings
+		linkInstitution: SJT
+		linkUrl: http://opac.lib.sjtu.edu.cn/F?func=item-global&amp;doc_library=SJT09&amp;local_base=SJT09&amp;doc_number=000311379
+		ovp: true
+		ovl: false
+		adaptorVersion: ALEPH_20
+		apiBase: http://opac.lib.sjtu.edu.cn:1891
+		ilsApiId: SJT09000311379
+		certificate: 
+		matchForHoldings: 
+			Key: MainLocation
+			Value: 852##b
+		errorCode: 0
+		 openInNewWindow: null
+		 browserType: null
+		 isLinkToOnlineRsrc: false
+		 linkToOnline: null;
+;
+
+	 getIt2TabsData: 
+		 delivery category: Physical Item
+		 getItTabText: tab2_unavail
+		 signInText: null
+		 getItTabLinks: 
+	displayText: openurl
+		linkInstitution: SJT
+		linkUrl: http://sfx.lib.sjtu.edu.cn:3210/sfxlcl3?url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-sjtulibxw&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:book&amp;rft.genre=book&amp;rft.atitle=&amp;rft.jtitle=&amp;rft.btitle=Version%20control%20with%20Git%20=%20Git版本控制&amp;rft.aulast=Loeliger&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Loeliger%2C%20Jon&amp;rft.aucorp=&amp;rft.volume=&amp;rft.issue=&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=&amp;rft.epage=&amp;rft.pages=&amp;rft.artnum=&amp;rft.issn=&amp;rft.eissn=&amp;rft.isbn=9787564141967&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/&amp;rft.object_id=&amp;rft.eisbn=&amp;rft_dat=&lt;sjtulibxw&gt;000311379&lt;/sjtulibxw&gt;&lt;grp_id&gt;50806657&lt;/grp_id&gt;&lt;oa&gt;&lt;/oa&gt;&amp;rft_id=info:oai/&gt;&amp;req.language=chi
+		ovp: false
+		ovl: false
+		adaptorVersion: ALEPH_20
+		apiBase: http://opac.lib.sjtu.edu.cn:1891
+		ilsApiId: SJT09000311379
+		certificate: 
+		matchForHoldings: 
+			Key: MainLocation
+			Value: 852##b
+		errorCode: 0
+		 openInNewWindow: Y
+		 browserType: null
+		 isLinkToOnlineRsrc: false
+		 linkToOnline: null;
+;
+
+	 thumbnailLinks: 
+		 http://pds.cceu.org.cn/cgi-bin/isbn_cover.cgi?isbn=9787564141967;
+
+BestLocation :
+
+LibraryAvailData
+	 institution: SJT
+	 library: LTSKJ
+	 status: unavailable
+	 dueDate: 
+	 collection: B区3楼工II阅览室外文图书
+	 callNumber: (TP311.561 L825V2 2013 )
+	 originalInstitution: SJT50
+	 mainLocation: LTSKJ
+	 secondaryLocation: LB3WJ
+	 isValidUser: true
+	 locationLink: null
+
+
+More libraries are available :	false
+
+LibrariesMap :
+{unavailable=[
+LibraryAvailData
+	 institution: SJT
+	 library: LTSKJ
+	 status: unavailable
+	 dueDate: 
+	 collection: B区3楼工II阅览室外文图书
+	 callNumber: (TP311.561 L825V2 2013 )
+	 originalInstitution: SJT50
+	 mainLocation: LTSKJ
+	 secondaryLocation: LB3WJ
+	 isValidUser: true
+	 locationLink: 
+	displayText: linktoholdings
+		linkInstitution: SJT
+		linkUrl: http://opac.lib.sjtu.edu.cn/F?func=item-global&amp;doc_library=SJT09&amp;local_base=SJT09&amp;doc_number=000311379
+		ovp: true
+		ovl: false
+		adaptorVersion: ALEPH_20
+		apiBase: http://opac.lib.sjtu.edu.cn:1891
+		ilsApiId: SJT09000311379
+		certificate: 
+		matchForHoldings: 
+			Key: MainLocation
+			Value: 852##b
+		errorCode: 0
+]}" noOther="true"
+	index="1" />
+	
+<!--end locationTable--></div>
+       </div> <!--end locationsList-->
+
+     	  <!--end EXLLocationListContainer-->
+
+	</div>
+</div>
+
+
+
+<script type="text/javascript">
+		
+		//switch all the images to a 'plus' and then add an onclick handler.
+ 		$('#exlidResult-1-TabContent .EXLLocationList').find('.EXLLocationsIcon img').each(function(){
+			var tbl = $(this).parents('.EXLLocationList').find('.EXLLocationTable');
+			var tblm = $(this).parents('.EXLLocationList').find('.EXLLocationsMoreInfo');
+ 			
+ 			if(tbl.html() == null && tblm.html() == null) {
+					$(this).attr('src',$(this).attr('src').replace('_minus','_plus'));
+ 			}
+
+ 		}).parents('a').click(function(e){
+			e.preventDefault();
+ 			var img = $(this).children('.EXLLocationsIcon img');
+			var tbl = $(this).parents('.EXLLocationList').find('.EXLLocationTable');
+			var tblm = $(this).parents('.EXLLocationList').find('.EXLLocationsMoreInfo');
+			var a = $(this);
+ 	 		if(tbl.html() == null && tblm.html() == null) {
+ 	 			//$(this).parents('.EXLLocationsTitle').siblings('.EXLLocationList').find('.EXLSublocation').html("<div class='EXLTabLoading'></div>");
+ 	 			$(this).get(0).loadedLocationsAlready = true;
+ 	 	 		var url = $(this).get(0).href;
+
+ 	 	 		prefetch(url,{'zzz':'zzz'},/*error handler*/function (){
+                    
+                    		var jsMsg = '没有相应条目';
+                            $(a).parents('.EXLLocationList').find('.EXLSublocation').append('<span class="EXLSublocationError">' + jsMsg + '</span>');
+                            //console.log('failed..');
+                            //alert($(tblm).html());
+					        //if we fail, make sure that we know we still didn't get the location info.
+                    });
+
+ 	 		}
+
+		    if ($(img).attr('src').indexOf('_plus.')>0 ){  //if the location is currently closed
+		    	$(tblm).show();
+		        $(tbl).show();
+	   		    $(img).attr('src',$(img).attr('src').replace('_plus','_minus'));
+	    	}else{
+	    		$(tblm).hide();
+		        $(tbl).hide();
+	   		    $(img).attr('src',$(img).attr('src').replace('_minus','_plus'));
+	    	}
+		});
+ 		
+
+	/*
+ 		$('.EXLAdditionalFieldsLink').removeClass('EXLHideInfo').addClass('EXLShowInfo').click(
+ 			function (e){
+ 				e.preventDefault();
+				if($(this).hasClass('EXLShowInfo')){
+					$(this).children('a').attr('title','隐藏馆藏地详细信息');
+	 				$(this).removeClass('EXLShowInfo').addClass('EXLHideInfo').parents('tr').next('.EXLAdditionalFieldsRow').show();
+	 			}else{
+	 				$(this).children('a').attr('title','显示馆藏地详细信息');
+	 				$(this).removeClass('EXLHideInfo').addClass('EXLShowInfo').parents('tr').next('.EXLAdditionalFieldsRow').hide();
+	 			}
+ 			});
+ 		$('.EXLAdditionalFieldsRow').hide();
+	*/
+
+			function concatLocations (cdata) {
+				var id = $('#clickedId').val();
+
+				//remove old button
+				$('#locationPagingButton' + id).remove();
+
+				//find the orig table
+			    var existTable = $("#locationsTable" + id);
+
+			    var tableDiv = document.createElement("div");
+				tableDiv.innerHTML = cdata;
+				var t = tableDiv.getElementsByTagName("table")[0];
+
+			    var trs = t.rows;
+				$(trs).remove('.EXLLocationTitlesRow');	//looks for the class!
+			    $(trs).each(function(){
+			        var tr = $(this);
+			       	existTable.append(tr);
+
+			       	if (tr.attr('class') && tr.attr('class').indexOf('EXLAdditionalFieldsRow') > -1) {
+			        	tr.hide();
+			        }
+			    });
+
+			    //located in locationTable.tag
+			    addJSToButton('#moreInfoButton' + id, id);
+				addJSToRow('.EXLLocationLink-1_' + id);
+			}
+
+			function fetchData(url, data){
+				$.ajax({
+					global: false,
+					success: function(data, textStatus){
+						parseXmlAndHandleModificationsOnly(data, true);
+					},
+					timeout:suggestTimeout(),
+					data: escapeAjaxCall(data),
+					url: escapeAjaxCall(url)
+				});
+			}
+			
+			</script>
+<script>
+	
+	$('#RefreshUrl-1').click(function(e){
+		forceTabRefresh(e,$('#RefreshUrl-1'),'locationsTab');return false;
+	});
+	</script>
+
+<input type="submit" class="EXLHide"/>
+</form><!-- renderTabContent.tag end --></div>
+            <div id="exlidResult0-TabContainer-detailsTab" class="EXLResultTabContainer EXLContainer-detailsTab EXLResultTabContainerClosed">
+                </div>
+            <div id="exlidResult0-TabContainer-tagreviewsTab" class="EXLResultTabContainer EXLContainer-tagreviewsTab EXLResultTabContainerClosed">
+                </div>
+            <div id="exlidResult0-TabContainer-recommendTab" class="EXLResultTabContainer EXLContainer-recommendTab EXLResultTabContainerClosed">
+                </div>
+            <div id="exlidResult0-TabContainer-moreTab" class="EXLResultTabContainer EXLContainer-moreTab EXLResultTabContainerClosed">
+                </div>
+                <div id="exlidResult0-TabContainer-citationsTab" class="EXLResultTabContainer EXLContainer-citationsTab " style="display:none;">
+
+                </div>
+                <div id="exlidResult0-TabContainer-onlinereviewsTab" class="EXLResultTabContainer EXLContainer-onlinereviewsTab " style="display:none;">
+
+            </div>
+            <div id="exlidResult0-TabContainer-browseshelfTab" class="EXLResultTabContainer EXLContainer-browseshelfTab EXLResultTabContainerClosed">
+                 </div>
+</div>
+
+<script type="text/javascript">
+var exlPrefetchConfiguration = {
+        enabled : 'false',
+        bulkSize : '2',
+        repeat : 'true',
+        loadedTab : 'locationsTab',
+        timeout: '30'
+}
+applySubmitHandlingToTabForms($('.EXLSummary'));//initialize any form that might load as part of the default page, so that it will submit via ajax
+
+//if (exlPrefetchConfiguration.loadedTab !=  'recommendTab') {
+        addLoadEvent( function(){checkRecommendation('sjtulibxw000311379', 'locationsTab', 'false');});
+//}
+
+if (exlPrefetchConfiguration.loadedTab == 'recommendTab') {
+        document.getElementById('exlidHref0').title = "提供推荐";
+}
+</script>
+<noscript>This feature requires javascript</noscript>
+<div class="EXLResultsHeader EXLResultsFooter">
+        <div class="EXLBackToResults">
+                                <a id="backToResultsBtn" href="search.do?pag=bak&amp;indx=1&amp;ct=&amp;viewAllItemsClicked=false&amp;selectedLocation=&amp;dscnt=0&amp;elementId=0&amp;recIdxs=0&amp;frbrVersion=3&amp;scp.scps=scope%3A(SJT)%2Cscope%3A(sjtu_metadata)%2Cscope%3A(sjtu_sfx)%2Cscope%3A(sjtulibzw)%2Cscope%3A(sjtulibxw)%2CDuxiuBook&amp;displayMode=full&amp;tab=default_tab&amp;dstmp=1455332762859&amp;ct=display&amp;gathStatTab=true&amp;indx=1&amp;recIds=sjtulibxw000311379&amp;renderMode=poppedOut&amp;doc=sjtulibxw000311379&amp;vl(freeText0)=git&amp;vid=chinese&amp;fn=search&amp;tabs=locationsTab&amp;doc=sjtulibxw000311379" target="_parent" title='转到检索结果列表'>返回检索结果列表</a>
+                                        </div>
+                <div class="EXLResultsNavigation">
+                        <span class="EXLDisplayedCountTitle">结果&nbsp;</span>
+                        <span class="EXLDisplayedCount">1</span>
+                        <a class="EXLNext" target="_parent" title='下一页' href="display.do?pag=nxt&amp;indx=1&amp;ct=display&amp;fn=search&amp;elementId=0&amp;renderMode=poppedOut&amp;displayMode=full&amp;dscnt=0&amp;frbrVersion=3&amp;scp.scps=scope%3A%28SJT%29%2Cscope%3A%28sjtu_metadata%29%2Cscope%3A%28sjtu_sfx%29%2Cscope%3A%28sjtulibzw%29%2Cscope%3A%28sjtulibxw%29%2CDuxiuBook&amp;tab=default_tab&amp;dstmp=1455332763123&amp;gathStatTab=true&amp;vl(freeText0)=git&amp;vid=chinese">下一页<img alt='下一页' src="../images/icon_arrow_next.png" /></a>
+                        </div>
+        </div>
+
+
+
+
+<script type="text/javascript">
+<!-- PRM-17057 Call to PC and get data for the conditional tab  -->
+addLoadEvent(checkConditional);
+</script>
+<noscript>This feature requires javascript</noscript>
+<input type="hidden" class="gatherpagestat" value="true" />
+
+<!-- For Alma Services Page -->
+<input type="hidden" class="EXLTabBoomId" id="title" 
+		value="A=Primo_Local&amp;I=SJT&amp;S=68559BAB8F7B9A06C7BC6EB08A742CB7&amp;IP=202.121.183.49&amp;SRVR=primofe.lib.sjtu.edu.cn&amp;P=brief&amp;OP=title&amp;M=&amp;TYP=Page_View_4.1.1.131211&amp;G=&amp;O=%261%26%26book%26SJT%26上海交通大学图书馆%26http://sfx.lib.sjtu.edu.cn:3210/sfxlcl3?url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-sjtulibxw&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:book&amp;rft.genre=book&amp;rft.atitle=&amp;rft.jtitle=&amp;rft.btitle=Version%20control%20with%20Git%20=%20Git版本控制&amp;rft.aulast=Loeliger&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Loeliger%2C%20Jon&amp;rft.aucorp=&amp;rft.volume=&amp;rft.issue=&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=&amp;rft.epage=&amp;rft.pages=&amp;rft.artnum=&amp;rft.issn=&amp;rft.eissn=&amp;rft.isbn=9787564141967&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/&amp;rft.object_id=&amp;rft.eisbn=&amp;rft_dat=&lt;sjtulibxw&gt;000311379&lt;/sjtulibxw&gt;&lt;grp_id&gt;50806657&lt;/grp_id&gt;&lt;oa&gt;&lt;/oa&gt;&amp;rft_id=info:oai/&gt;&amp;req.language=chi%26&amp;O1=Primo Local&amp;O2=sjtulibxw&amp;O3=sjtulibxw000311379&amp;O4=title,locationsTab&amp;O5=PRD.86SJT.SJT&amp;O6=50806657&amp;O7=0&amp;O8=&amp;O9=&amp;"/>
+<input type="hidden" class="boombaseurl" value="http://beacon01.alma.exlibrisgroup.com/boom/apache_pb.gif" />
+
+<script type="text/javascript">
+        boomCallToRum("title",true);
+</script>
+<noscript>This feature requires javascript</noscript>
+</div>
+    </div>
+</div>
+<div id="exlidFullResultsIdeas" class="EXLFullResultsIdeasStaticHTML">
+	<!-- l_ideasfull.jsp begin -->
+<!-- taglibsIncludeAll.jspf begin -->
+<!-- taglibsIncludeAll.jspf end --><!-- jsp_mapping_retriever.jsp begin -->
+<!-- jsp_mapping_retriever.jsp end -->
+<!-- ideasfull_tile.jsp begin -->
+<!-- taglibsIncludeAll.jspf begin -->
+<!-- taglibsIncludeAll.jspf end --><div>
+	<!-- includeStaticHTML.jspf begin (/static_htmls/chinese/ideasfull.jsp) -->
+<!-- taglibsIncludeAll.jspf begin -->
+<!-- taglibsIncludeAll.jspf end --><!-- removed content out of the box in v3.0 -->
+<!-- includeStaticHTML.jspf end (/static_htmls/chinese/ideasfull.jsp) --></div>
+<!-- ideasfull_tile.jsp end --><!-- l_ideasfull.jsp end --></div>
+<div id="footerEXL" class="EXLFooter EXLClearBoth EXLFooterTile">
+    <!-- l_footer.jsp begin -->
+<!-- taglibsIncludeAll.jspf begin -->
+<!-- taglibsIncludeAll.jspf end --><!-- jsp_mapping_retriever.jsp begin -->
+<!-- jsp_mapping_retriever.jsp end -->
+<!-- footer.jsp begin -->
+<!-- taglibsIncludeAll.jspf begin -->
+<!-- taglibsIncludeAll.jspf end --><!-- includeStaticHTML.jspf begin (/static_htmls/chinese/footer.html) -->
+<!-- taglibsIncludeAll.jspf begin -->
+<!-- taglibsIncludeAll.jspf end --><!--begin footer-->
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F824a2e99394ac47a8020e023d6abeb80' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div id="footer">
+<p>
+<a href="http://www.lib.sjtu.edu.cn/" target='_blank'>&#x56FE;&#x4E66;&#x9986;&#x4E3B;&#x9875;</a>
+&nbsp;|&nbsp;
+<a href="http://www.lib.sjtu.edu.cn/index.php?m=content&c=index&a=lists&catid=223" target='_blank'>&#x7535;&#x5B50;&#x6570;&#x636E;&#x5E93;</a>
+&nbsp;|&nbsp;
+
+<a href="http://www.lib.sjtu.edu.cn/list.do?articleType_id=176" target='_blank'>&#x5B66;&#x79D1;&#x535A;&#x5BA2;</a>
+&nbsp;|&nbsp;
+<a href="http://jianshu.lib.sjtu.edu.cn" target='_blank'>&#x56FE;&#x4E66;&#x8350;&#x8D2D;</a>
+&nbsp;|&nbsp;
+
+<a href="http://www.lib.sjtu.edu.cn/ourexV/version.html" target='_blank'>&#x7248;&#x672C;&#x4FE1;&#x606F;</a>
+</p>
+<p>
+</p>
+<p>
+&#x7248;&#x6743;&#x6240;&#x6709;&copy;&#x4E0A;&#x6D77;&#x4EA4;&#x901A;&#x5927;&#x5B66;&#x56FE;&#x4E66;&#x9986; &#x6CAA;&#x4EA4;ICP&#x5907;05015
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x4E2D;&#x56FD;&#x4E0A;&#x6D77;&#x5E02;&#x4E1C;&#x5DDD;&#x8DEF;800&#x53F7; 200240 &nbsp; <a href="mailto:ourex@lib.sjtu.edu.cn" target='_blank'><font color="#CCCCCC">Email:ourex@lib.sjtu.edu.cn </font></a>
+
+</p>
+</div>
+<!--end footer-->
+
+<!-- includeStaticHTML.jspf end (/static_htmls/chinese/footer.html) --><!-- autoRefresh.jspf begin -->
+<!-- deferScript.tag begin -->
+<!-- deferScript.tag end --><div class="EXLFooterUpdateContainer">
+    <div class="EXLFooterAutoUpdate">
+      <form action="" method="post" name="update" id="update">
+		<input type="checkbox" id="allowRefresh_chkbx" checked="checked" onclick="updateAutoRefresh(this);"/>
+		<label for="allowRefresh_chkbx">自动更新屏幕<!-- Update my screen automatically --></label>
+
+		<input class="EXLHide" type="submit"/>
+      </form>
+    </div>
+  </div>
+
+<!-- autoRefresh.jspf end --><!-- footer.jsp end -->
+
+
+
+
+<!-- l_footer.jsp end -->
+</div>
+</div>
+<!-- pleaseWait.jsp begin -->
+<!-- taglibsIncludeAll.jspf begin -->
+<!-- taglibsIncludeAll.jspf end --><div id="exlidPleaseWaitContainer">
+  <div id="exlidPleaseWaitTile" class="EXLPleaseWait">
+    <div class="EXLPleaseWaitHeader">
+      <h1>正在检索远程数据库，请稍候</h1>
+
+    </div>
+    <!--end EXLPleaseWaitHeader-->
+    <div class="EXLPleaseWaitList">
+      <ul>
+        <li class="EXLPleaseWaitListFirstItem"><span>查找</span><strong id="exlidPleaseWaitSearchTerms"></strong></li>
+        <li><span>在</span><strong id="exlidPleaseWaitSearchScope">scope:(SJT),scope:(sjtu_metadata),scope:(sjtu_sfx),scope:(sjtulibzw),scope:(sjtulibxw),DuxiuBook</strong></li>
+        <li class="EXLPleaseWaitListLastItem"><span><a href="#" id="exlidPleaseWaitStopSearch" title="stop search and show me the result list">中断检索，显示已有的结果</a></span></li>
+      </ul>
+    </div>
+    <!--end EXLPleaseWaitList-->
+    <div class="EXLPleaseWaitProgressBar">
+      <div class="EXLPleaseWaitProgressBarContainer">
+        <div id="exlidProgressBar" class="EXLPleaseWaitProgressBarFiller"></div>
+      </div>
+    </div>
+  </div>
+
+  <!--end exlidPleaseWaitTile-->
+</div>
+<!-- pleaseWait.jsp end --><script type="text/javascript" src="../javascript/pleaseWait.js"></script>
+<noscript>This feature requires javascript</noscript>
+<!-- deferredScripts.tag begin -->
+<!-- deferred comment:  -->
+				<script type="text/javascript">
+					
+//<![CDATA[
+function handleAutoRefreshResponse(){
+	if(checkReadyState(request)) //check to see if we have data.
+	{
+		//we don't really care about the response. it's fire and forget.
+	}else{
+	}
+}
+
+function updateAutoRefresh(checkbox){
+	var autoRefreshUrl = 'preferences.do?fn=allowRefresh&url=../static_htmls/blank.html&allowRefresh=';
+	if (checkbox.checked){
+		ajaxGet(autoRefreshUrl+'on',handleAutoRefreshResponse);
+	}else{
+		ajaxGet(autoRefreshUrl+'off',handleAutoRefreshResponse);
+	}
+}
+// ]]>
+</script><!-- deferredScripts.tag end -->
+<noscript>This feature requires javascript</noscript>
+
+
+</body>
+</html>
