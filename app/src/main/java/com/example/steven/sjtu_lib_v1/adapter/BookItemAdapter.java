@@ -58,7 +58,6 @@ public class BookItemAdapter extends ArrayAdapter<Element> {
         }else{
             return null;
         }
-
     }
 
     public BookItemAdapter(Context context, int resource, List<Element> objects) {
@@ -89,7 +88,6 @@ public class BookItemAdapter extends ArrayAdapter<Element> {
         @Override
         public void putBitmap(String url, Bitmap bitmap) {
             mCache.put(url,bitmap);
-
         }
     }
 }

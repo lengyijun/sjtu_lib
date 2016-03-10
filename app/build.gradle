@@ -17,7 +17,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    sourceSets { main { res.srcDirs = ['src/main/res', 'src/main/res/fragment'] } }
+    sourceSets {
+        main {
+            res.srcDirs = ['src/main/res', 'src/main/res/fragment']
+            java.srcDirs = ['src/main/java', 'src/main/java/2']
+        }
+    }
 }
 
 dependencies {
@@ -27,23 +32,21 @@ dependencies {
     compile files('C:/Users/steven/AndroidStudioProjects/sjtu_lib_v1/jar/butterknife-7.0.1.jar')
     compile files('C:/Users/steven/AndroidStudioProjects/sjtu_lib_v1/jar/okhttp-3.0.1.jar')
     compile files('C:/Users/steven/AndroidStudioProjects/sjtu_lib_v1/jar/okio-1.6.0.jar')
-    compile 'com.android.support:appcompat-v7:23.1.1'
-    compile 'com.github.nicolasjafelle:paginglistview:1.2'
-    compile 'com.android.support:support-v4:23.1.1'
-    compile 'com.zhy:okhttputils:2.2.0'
-    compile 'com.rengwuxian.materialedittext:library:2.1.4'
-    compile 'com.mcxiaoke.volley:library:1.0.19'
     compile files('libs/android-support-v7-recyclerview.jar')
     //    compile 'net.soulwolf.widget:materialRadio:1.0.1'
     compile files('libs/multi-asynctask.jar')
-    compile 'com.baoyz.swipemenulistview:library:1.3.0'
     compile files('libs/butterknife-7.0.1.jar')
     compile files('libs/jsoup/jsoup-1.8.3.jar')
+    compile 'com.android.support:appcompat-v7:23.2.0'
+    compile 'com.github.nicolasjafelle:paginglistview:1.2'
+    compile 'com.android.support:support-v4:23.2.0'
+    compile 'com.zhy:okhttputils:2.2.0'
+    compile 'com.rengwuxian.materialedittext:library:2.1.4'
+    compile 'com.mcxiaoke.volley:library:1.0.19'
+    compile 'com.baoyz.swipemenulistview:library:1.3.0'
     compile 'com.wang.avi:library:1.0.2'
     compile 'com.nineoldandroids:library:2.4.0'
-    compile 'com.android.support:cardview-v7:23.1.1'
-//    compile 'com.android.support:design:23.1.1'
-//    compile 'com.github.glomadrian:loadingballs:1.1@aar'
-//    compile 'teamdapsr.loaders:lib:1.0'
-//    compile 'com.lusfold.spinnerloading:spinnerloading:1.0.0'
+    compile 'com.android.support:cardview-v7:23.2.0'
+    compile 'com.alirezaafkar:toolbar:1.0.7'
+    compile 'com.facebook.stetho:stetho:1.0.1'
 }

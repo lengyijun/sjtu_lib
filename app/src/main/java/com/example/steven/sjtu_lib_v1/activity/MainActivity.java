@@ -97,7 +97,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onPullDistance(int distance) {
                 superSwipeRefreshLayout.setRefreshing(false);
-
             }
 
             @Override

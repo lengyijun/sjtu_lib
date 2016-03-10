@@ -5,6 +5,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <com.alirezaafkar.toolbar.Toolbar
+        android:id="@+id/toolbar_search"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:direction="rtl"
+        app:optionsMenu="@menu/menu_search"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:title="@string/app_name"/>
+
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
@@ -74,5 +84,12 @@
         android:id="@+id/search_button"
         android:layout_gravity="center_vertical" />
 
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView2"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="99dp" />
 
 </LinearLayout>
